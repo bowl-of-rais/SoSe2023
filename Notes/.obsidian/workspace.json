@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "a8e0c94445897988",
+    "type": "split",
+    "children": [
+      {
+        "id": "b782b62b85d7fbfb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bb686325db59365",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8dc3a1c04a1482f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "656af158c8e1dac8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f3620128de2f03e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e540a020cd519be4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bde1cbf3099ec1a7",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4968eb755a6d2305",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd2c4376513e6c54",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9d8092a3ab035e3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d47c74f0dabe7e27",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d57089a88d5ab0fc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ae5772407715276d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4bb686325db59365",
+  "lastOpenFiles": [
+    "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+    "CIT4230006 Causal Inference in Time Series",
+    "Technology, Economy, and Society",
+    "CIT4230004 Statistical Foundations of Learning",
+    "IN2346 Introduction to Deep Learning",
+    "IN2356 Autonomous Driving",
+    "IN2222 Cognitive Systems",
+    "IN2049 Logic"
+  ]
+}
