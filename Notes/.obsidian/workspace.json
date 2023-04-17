@@ -18,8 +18,81 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c4a8ff0d24e87e6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IN2356 Autonomous Driving/Autonomous Driving - Organizational.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e9530d969c86cbe3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technology, Economy, and Society/TES - Organizational.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4ece5e7c9c72a2b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IN2222 Cognitive Systems/Cognitive Systems - Organizational.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "75c1876df032aa64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IN2049 Logic/Logic - Organizational.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "60137757831ca897",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CIT4230006 Causal Inference in Time Series/Causal Inference  - Organizational.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c19a71b66133e40d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CIT4230004 Statistical Foundations of Learning/StatFoundations  - Organizational.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -85,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+                "file": "CIT4230004 Statistical Foundations of Learning/StatFoundations  - Organizational.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+                "file": "CIT4230004 Statistical Foundations of Learning/StatFoundations  - Organizational.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md"
+                "file": "CIT4230004 Statistical Foundations of Learning/StatFoundations  - Organizational.md"
               }
             }
           }
@@ -146,9 +219,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4bb686325db59365",
+  "active": "5f3620128de2f03e",
   "lastOpenFiles": [
+    "CIT4230006 Causal Inference in Time Series/Causal Inference  - Organizational.md",
+    "CIT4230004 Statistical Foundations of Learning/StatFoundations  - Organizational.md",
+    "IN2049 Logic/Logic - Organizational.md",
+    "IN2222 Cognitive Systems/Cognitive Systems - Organizational.md",
+    "Technology, Economy, and Society/TES - Organizational.md",
+    "IN2356 Autonomous Driving/Autonomous Driving - Organizational.md",
     "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+    "Untitled",
     "CIT4230006 Causal Inference in Time Series",
     "Technology, Economy, and Society",
     "CIT4230004 Statistical Foundations of Learning",
