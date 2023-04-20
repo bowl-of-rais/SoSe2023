@@ -13,7 +13,7 @@
     {
       "id": "et6LhcRt3uMKNJqEV5jGk",
       "name": "blue",
-      "value": "#b8baff"
+      "value": "#9ebeff"
     },
     {
       "id": "Qny0N6xcfHDbOMT1IWUfB",
@@ -128,6 +128,10 @@
     {
       "path": "notes/ML for Graphs and Sequential Data/1.1. Autoregressive Models.md",
       "color": "Qny0N6xcfHDbOMT1IWUfB"
+    },
+    {
+      "path": "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
+      "color": "et6LhcRt3uMKNJqEV5jGk"
     }
   ]
 }

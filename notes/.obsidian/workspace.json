@@ -11,44 +11,15 @@
             "id": "4bb686325db59365",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "06bf5c2ba7657bc6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "5ade2e5291e5e97e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "a4163d4a23abb51c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "870331c9e17c3b28",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md"
+              }
             }
           },
           {
@@ -179,48 +154,50 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "reference-map:Reference Map": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "870331c9e17c3b28",
+  "active": "4bb686325db59365",
   "lastOpenFiles": [
-    "notes/advanced-ml---deep-generative-models/1.-normalizing-flows.html",
-    "notes/advanced-ml---deep-generative-models/2.1.-variational-inference.html",
-    "notes/advanced-ml---deep-generative-models/2.2.-variational-autoencoder.html",
-    "notes/advanced-ml---deep-generative-models/3.-generative-adversarial-networks.html",
-    "notes/advanced-ml---deep-generative-models/4.-denoising-diffusion.html",
-    "notes/advanced-ml---deep-generative-models/advanced-ml---deep-generative-models.html",
-    "notes/advanced-ml---deep-generative-models/introduction.html",
-    "notes/advanced-ml---deep-generative-models",
-    "notes/in2049-logic/1---introduction-to-logic.html",
-    "notes/in2049-logic/2---basics-of-propositional-logic.html",
-    "notes/in2049-logic/logic---organizational.html",
+    "index.md",
     "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
     "notes/Advanced ML - Deep Generative Models/2.1. Variational inference.md",
-    "index.md",
-    "notes/Technology, Economy, and Society/Technology, Economy, Society.md",
-    "notes/Technology, Economy, and Society/Introduction + Motivation.md",
-    "notes/ML for Graphs and Sequential Data/ML for Graphs and Sequential Data.md",
-    "notes/IN2346 Introduction to Deep Learning/Introduction to Deep Learning.md",
-    "notes/IN2049 Logic/Logic.md",
-    "notes/Advanced ML - Deep Generative Models/Advanced ML - Deep Generative Models.md",
-    "notes/IN2346 Introduction to Deep Learning/I2DL - Introduction.md",
-    "notes/IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
-    "assets/Pasted image 20230420095356.png",
-    "Pasted image 20230420095356.png",
-    "notes/ML for Graphs and Sequential Data/1.1. Autoregressive Models.md",
-    "notes/Advanced ML - Deep Generative Models/Introduction.md",
-    "notes/Advanced ML - Deep Generative Models/4. Denoising Diffusion.md",
-    "notes/Advanced ML - Deep Generative Models/3. Generative Adversarial Networks.md",
     "notes/Advanced ML - Deep Generative Models/2.2. Variational Autoencoder.md",
-    "notes/IN2049 Logic/Logic - Organizational.md",
-    "IN2356 Autonomous Driving/Autonomous Driving - Organizational.md",
-    "notes/IN2049 Logic/2 - Basics of Propositional Logic.md",
+    "notes/Advanced ML - Deep Generative Models/3. Generative Adversarial Networks.md",
+    "notes/Advanced ML - Deep Generative Models/4. Denoising Diffusion.md",
+    "notes/Advanced ML - Deep Generative Models/Advanced ML - Deep Generative Models.md",
+    "notes/Advanced ML - Deep Generative Models/Introduction.md",
     "notes/IN2049 Logic/1 - Introduction to Logic.md",
+    "notes/IN2049 Logic/2 - Basics of Propositional Logic.md",
+    "notes/IN2049 Logic/Logic - Organizational.md",
+    "notes/IN2049 Logic/Logic.md",
     "notes/IN2346 Introduction to Deep Learning/1 - Machine Learning Basics.md",
+    "notes/IN2346 Introduction to Deep Learning/10 - CNNs.md",
+    "notes/IN2346 Introduction to Deep Learning/11 - RNNs.md",
+    "notes/IN2346 Introduction to Deep Learning/12 - Advanced DL architectures.md",
     "notes/IN2346 Introduction to Deep Learning/2 - Linear Regression.md",
     "notes/IN2346 Introduction to Deep Learning/3 - Maximum Likelihood.md",
     "notes/IN2346 Introduction to Deep Learning/4 - Neural Networks.md",
-    "notes/IN2346 Introduction to Deep Learning/5 - Computational Graphs.md"
+    "notes/IN2346 Introduction to Deep Learning/5 - Computational Graphs.md",
+    "notes/IN2346 Introduction to Deep Learning/6 - Optimization and Backpropagation.md",
+    "notes/IN2346 Introduction to Deep Learning/7 - Scaling Optimization to Large Data.md",
+    "notes/IN2346 Introduction to Deep Learning/8 - Stochastic Gradient Descent.md",
+    "notes/IN2346 Introduction to Deep Learning/9 - Training Neural Networks.md",
+    "notes/IN2346 Introduction to Deep Learning/I2DL - Introduction.md",
+    "notes/IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+    "notes",
+    "assets/Pasted image 20230420095356.png",
+    "assets",
+    "New folder",
+    "Pasted image 20230420095356.png",
+    "notes/Technology, Economy, and Society",
+    "IN2356 Autonomous Driving",
+    "IN2222 Cognitive Systems",
+    "notes/IN2049 Logic",
+    "notes/ML for Graphs and Sequential Data",
+    "notes/Advanced ML - Deep Generative Models",
+    "notes/IN2346 Introduction to Deep Learning"
   ]
 }
