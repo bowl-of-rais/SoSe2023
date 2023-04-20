@@ -1,0 +1,58 @@
+{
+  "collapse-filter": false,
+  "search": "path:notes",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"Advanced ML - Deep Generative Models\"",
+      "color": {
+        "a": 1,
+        "rgb": 5431511
+      }
+    },
+    {
+      "query": "path:\"ML for Graphs and Sequential Data\"",
+      "color": {
+        "a": 1,
+        "rgb": 5407200
+      }
+    },
+    {
+      "query": "path:\"IN2346 Introduction to Deep Learning\"",
+      "color": {
+        "a": 1,
+        "rgb": 10965728
+      }
+    },
+    {
+      "query": "path:\"IN2049 Logic\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701269
+      }
+    },
+    {
+      "query": "path:\"Technology, Economy, and Society\"",
+      "color": {
+        "a": 1,
+        "rgb": 14717522
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 1,
+  "close": true
+}

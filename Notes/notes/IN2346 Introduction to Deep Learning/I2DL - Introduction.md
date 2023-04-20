@@ -1,14 +1,5 @@
 ----
 
-## Overview
-- ML basics
-- Neural Networks
-- Backpropagation
-- Optimization
-- CNNs
-- RNNs
-- Transformers etc
-
 ## Context
 
 - **Artificial Intelligence**: very broad field, anything that mimics intelligence

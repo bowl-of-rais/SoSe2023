@@ -9,36 +9,125 @@
       "id": "LFomjE2gAxyzAZJf4uWQv",
       "name": "purple",
       "value": "#b98fdc"
+    },
+    {
+      "id": "et6LhcRt3uMKNJqEV5jGk",
+      "name": "blue",
+      "value": "#b8baff"
+    },
+    {
+      "id": "Qny0N6xcfHDbOMT1IWUfB",
+      "name": "turquoise",
+      "value": "#99e5ea"
+    },
+    {
+      "id": "l7qegkBRXLdgpmVBCa-vh",
+      "name": "green",
+      "value": "#8ddd9d"
+    },
+    {
+      "id": "AbaxnwnMZoTIt-wzqkBS3",
+      "name": "yellow",
+      "value": "#fdff9e"
+    },
+    {
+      "id": "B_Y8vmQl9Rs4Ve3ROnrbJ",
+      "name": "orange",
+      "value": "#ffc18f"
+    },
+    {
+      "id": "9aPjTHRel98ZaeFOpz7wA",
+      "name": "red",
+      "value": "#fb9898"
+    },
+    {
+      "id": "1v7H-4DWy4jMUQ0uT9fgW",
+      "name": "white",
+      "value": "#ffffff"
+    },
+    {
+      "id": "8pVyM3HLowYv0eH5jYkhP",
+      "name": "grey",
+      "value": "#949494"
+    },
+    {
+      "id": "6eN61NTUxsrdCS3UOvh4h",
+      "name": "black",
+      "value": "#000000"
     }
   ],
   "fileColors": [
     {
-      "path": "IN2049 Logic",
+      "path": "notes/IN2049 Logic",
       "color": "8emDmA_jvDR5JvgsCq0GW"
     },
     {
-      "path": "IN2049 Logic/1 - Introduction to Logic.md",
+      "path": "notes/IN2049 Logic/1 - Introduction to Logic.md",
       "color": "8emDmA_jvDR5JvgsCq0GW"
     },
     {
-      "path": "IN2049 Logic/2 - Basics of Propositional Logic.md",
+      "path": "notes/IN2049 Logic/2 - Basics of Propositional Logic.md",
       "color": "8emDmA_jvDR5JvgsCq0GW"
     },
     {
-      "path": "IN2049 Logic/Logic - Organizational.md",
+      "path": "notes/IN2049 Logic/Logic - Organizational.md",
       "color": "8emDmA_jvDR5JvgsCq0GW"
     },
     {
-      "path": "IN2346 Introduction to Deep Learning",
+      "path": "notes/IN2346 Introduction to Deep Learning",
       "color": "LFomjE2gAxyzAZJf4uWQv"
     },
     {
-      "path": "IN2346 Introduction to Deep Learning/I2DL - Introduction and Overview.md",
+      "path": "notes/IN2346 Introduction to Deep Learning/I2DL - Introduction.md",
       "color": "LFomjE2gAxyzAZJf4uWQv"
     },
     {
-      "path": "IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
-      "color": "LFomjE2gAxyzAZJf4uWQv"
+      "path": "notes/IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
+      "color": "8pVyM3HLowYv0eH5jYkhP"
+    },
+    {
+      "path": "notes/Advanced ML - Deep Generative Models",
+      "color": "et6LhcRt3uMKNJqEV5jGk"
+    },
+    {
+      "path": "notes/Technology, Economy, and Society",
+      "color": "B_Y8vmQl9Rs4Ve3ROnrbJ"
+    },
+    {
+      "path": "notes/ML for Graphs and Sequential Data",
+      "color": "Qny0N6xcfHDbOMT1IWUfB"
+    },
+    {
+      "path": "notes/ML for Graphs and Sequential Data/ML for Graphs and Sequential Data.md",
+      "color": "8pVyM3HLowYv0eH5jYkhP"
+    },
+    {
+      "path": "notes/Advanced ML - Deep Generative Models/Introduction.md",
+      "color": "et6LhcRt3uMKNJqEV5jGk"
+    },
+    {
+      "path": "notes/Advanced ML - Deep Generative Models/Advanced ML - Deep Generative Models.md",
+      "color": "et6LhcRt3uMKNJqEV5jGk"
+    },
+    {
+      "path": "notes/IN2346 Introduction to Deep Learning/Introduction to Deep Learning.md",
+      "color": "8pVyM3HLowYv0eH5jYkhP"
+    },
+    {
+      "path": "notes/IN2049 Logic/Logic.md",
+      "color": "8pVyM3HLowYv0eH5jYkhP"
+    },
+    {
+      "path": "notes/Technology, Economy, and Society/Introduction + Motivation.md",
+      "color": "B_Y8vmQl9Rs4Ve3ROnrbJ"
+    },
+    {
+      "path": "notes/Technology, Economy, and Society/Technology, Economy, Society.md",
+      "color": "8pVyM3HLowYv0eH5jYkhP"
+    },
+    {
+      "path": "notes/ML for Graphs and Sequential Data/1.1. Autoregressive Models.md",
+      "color": "Qny0N6xcfHDbOMT1IWUfB"
     }
   ]
 }
