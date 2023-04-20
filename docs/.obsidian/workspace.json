@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Technology, Economy, and Society/Technology, Economy, Society.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Index.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -187,8 +187,7 @@
               }
             }
           }
-        ],
-        "currentTab": 13
+        ]
       }
     ],
     "direction": "vertical"
@@ -254,7 +253,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/ML for Graphs and Sequential Data/1.1. Autoregressive Models.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -271,7 +270,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/ML for Graphs and Sequential Data/1.1. Autoregressive Models.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -294,7 +293,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/ML for Graphs and Sequential Data/1.1. Autoregressive Models.md"
+                "file": "index.md"
               }
             }
           },
@@ -316,17 +315,17 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "reference-map:Reference Map": false
+      "reference-map:Reference Map": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5f3620128de2f03e",
+  "active": "4bb686325db59365",
   "lastOpenFiles": [
     "notes/Technology, Economy, and Society/Technology, Economy, Society.md",
     "notes/Technology, Economy, and Society/Introduction + Motivation.md",
@@ -334,7 +333,7 @@
     "notes/IN2346 Introduction to Deep Learning/Introduction to Deep Learning.md",
     "notes/IN2049 Logic/Logic.md",
     "notes/Advanced ML - Deep Generative Models/Advanced ML - Deep Generative Models.md",
-    "Index.md",
+    "index.md",
     "notes",
     "notes/IN2346 Introduction to Deep Learning/I2DL - Introduction.md",
     "notes/IN2346 Introduction to Deep Learning/I2DL - Organizational.md",
