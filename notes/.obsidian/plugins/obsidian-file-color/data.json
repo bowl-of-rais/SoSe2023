@@ -62,16 +62,16 @@
       "color": "8emDmA_jvDR5JvgsCq0GW"
     },
     {
-      "path": "notes/IN2049 Logic/1 - Introduction to Logic.md",
+      "path": "notes/IN2049 Logic/1 Introduction to Logic.md",
       "color": "8emDmA_jvDR5JvgsCq0GW"
     },
     {
-      "path": "notes/IN2049 Logic/2 - Basics of Propositional Logic.md",
+      "path": "notes/IN2049 Logic/2.1 Basics of Propositional Logic.md",
       "color": "8emDmA_jvDR5JvgsCq0GW"
     },
     {
       "path": "notes/IN2049 Logic/Logic - Organizational.md",
-      "color": "8emDmA_jvDR5JvgsCq0GW"
+      "color": "8pVyM3HLowYv0eH5jYkhP"
     },
     {
       "path": "notes/IN2346 Introduction to Deep Learning",
@@ -126,12 +126,16 @@
       "color": "8pVyM3HLowYv0eH5jYkhP"
     },
     {
-      "path": "notes/ML for Graphs and Sequential Data/1.1. Autoregressive Models.md",
+      "path": "notes/ML for Graphs and Sequential Data/1.1 Autoregressive Models.md",
       "color": "Qny0N6xcfHDbOMT1IWUfB"
     },
     {
       "path": "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
       "color": "et6LhcRt3uMKNJqEV5jGk"
+    },
+    {
+      "path": "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
+      "color": "8emDmA_jvDR5JvgsCq0GW"
     }
   ]
 }
