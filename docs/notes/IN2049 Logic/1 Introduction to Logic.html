@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Logic</title>
+  <title>1 Introduction to Logic</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
@@ -16089,10 +16089,10 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
     <div class="center-content">
       <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
         <div>
-          <h1 id="Logic">
+          <h1 id="1_Introduction_to_Logic">
             <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                 <path d="M3 8L12 17L21 8"></path>
-              </svg></div>Logic
+              </svg></div>1 Introduction to Logic
           </h1>
         </div>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
@@ -16102,29 +16102,391 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
             <hr>
           </div>
           <div>
-            <p><a class="internal-link" data-href="Logic - Organizational.md" href="Logic - Organizational.html" target="_self" rel="noopener">Logic - Organizational</a></p>
-          </div>
-          <div>
-            <p><a class="internal-link" data-href="1 Introduction to Logic.md" href="1 Introduction to Logic.html" target="_self" rel="noopener">1 Introduction to Logic</a></p>
-          </div>
-          <div>
-            <h4 data-heading="Propositional Logic" id="Propositional_Logic">
+            <h2 data-heading="Basic Terms and Background" id="Basic_Terms_and_Background">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Propositional Logic
+                </svg></div>Basic Terms and Background
+            </h2>
+          </div>
+          <div>
+            <blockquote>
+              <p><strong>Logic</strong>: subject of identifying true statements in a language of which you only know a few words</p>
+            </blockquote>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>necessary words: if, and, or.... what words do we need to define math?
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>application: description logic
+              </li>
+            </ul>
+          </div>
+          <div>
+            <blockquote>
+              <p><strong>Logic</strong>: <mark>science of inferences</mark> → which inferences are correct?</p>
+            </blockquote>
+          </div>
+          <div>
+            <blockquote>
+              <p><strong>Inference</strong>: statements of form 'if A is true, then B is true', where A is <em>hypothesis</em>, B is <em>conclusion</em></p>
+            </blockquote>
+          </div>
+          <div>
+            <p>example of a correct inference:</p>
+          </div>
+          <div>
+            <pre><code>if 
+	all men are mortal and Socrates is a man 
+then 
+	Socrates is mortal
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>NOTE: <code>if A then B</code> being correct does not imply <code>A</code> being correct. we only know that if the inference is correct <strong>and</strong> A is true, then B is true<br>
+              (colloquially, if A then B can also mean you believe A to be true apparently)</p>
+          </div>
+          <div>
+            <p>example of an incorrect inference:</p>
+          </div>
+          <div>
+            <pre><code>if
+	some women are tall and all mothers are women
+then
+	some mothers are tall
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p></p>
+          </div>
+          <div>
+            <p>inferences might require additional knowledge:</p>
+          </div>
+          <div>
+            <pre><code>if
+	Anne has a gradchild
+then
+	Anne is a mother
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h4 data-heading="Definition: Logical Inferences" id="Definition:_Logical_Inferences">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Definition: Logical Inferences
             </h4>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.1 Basics of Propositional Logic.md" href="2.1 Basics of Propositional Logic.html" target="_self" rel="noopener">2.1 Basics of Propositional Logic</a></p>
+            <p>non-standard definition:</p>
           </div>
           <div>
-            <p><a data-href="2.2 Equivalences in Propositional Logic.md" href="2.2 Equivalences in Propositional Logic.html" class="internal-link" target="_self" rel="noopener">2.2 Equivalences in Propositional Logic.md</a></p>
+            <blockquote>
+              <p><strong>Logical inference</strong>: inference with variables</p>
+            </blockquote>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.3 Normal Forms in Propositional Logic.md" href="2.3 Normal Forms in Propositional Logic.html" target="_self" rel="noopener">2.3 Normal Forms in Propositional Logic</a></p>
+            <p>key point: logical inference is correct if all its instances are correct</p>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.4 Compactness in Propositional Logic.md" href="2.4 Compactness in Propositional Logic.html" target="_self" rel="noopener">2.4 Compactness in Propositional Logic</a></p>
+            <blockquote>
+              <p>meaning the inference is <strong>valid</strong> or a <strong>tautology</strong></p>
+            </blockquote>
+          </div>
+          <div>
+            <p>examples of valid tautologies:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2227"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2227"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2227"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo stretchy="false">(</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>A</mi>
+                        <mo>∧</mo>
+                        <mi>B</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>∧</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>B</mi>
+                        <mo stretchy="false">→</mo>
+                        <mi>C</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">→</mo>
+                        <mi>A</mi>
+                        <mo>∧</mo>
+                        <mi>C</mi>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>NOTE: correct != valid</p>
+          </div>
+          <div>
+            <h4 data-heading="Logic Facts" id="Logic_Facts">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Logic Facts
+            </h4>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>basis of mathematical proof
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>people used to do it very hand-wave-ily but then needed a more solid framework for math
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p><strong>Different kinds of logic</strong>:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>different language fragments
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>propositional</strong>: and, or, not, if..then
+                <ul class="has-list-bullet">
+                  <li data-line="2">
+                    <div class="list-bullet"></div>if X and Y then Y
+                  </li>
+                  <li data-line="3">
+                    <div class="list-bullet"></div>variables are statements
+                  </li>
+                </ul>
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>syllogistic</strong>: all, some, none
+                <ul class="has-list-bullet">
+                  <li data-line="5">
+                    <div class="list-bullet"></div>if all A are B and no B is a C then no A is a C
+                  </li>
+                  <li data-line="6">
+                    <div class="list-bullet"></div>variables are objects
+                  </li>
+                </ul>
+              </li>
+              <li data-line="7">
+                <div class="list-bullet"></div><strong>temporal</strong>: propositional + today, tomorrow, sometime, never
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>Bertrand Russell: "...the subject in which we never know what we are talking about, nor whether what we are saying is true"</p>
+          </div>
+          <div>
+            <p>also: ChatGPT can be tricked into logical fallacies</p>
+          </div>
+          <div>
+            <h2 data-heading="History of Logic" id="History_of_Logic">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>History of Logic
+            </h2>
+          </div>
+          <div>
+            <p><a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Mathematical_logic#History" rel="noopener" class="external-link" href="https://en.wikipedia.org/wiki/Mathematical_logic#History" target="_blank">Wikipedia article</a></p>
+          </div>
+          <div>
+            <h4 data-heading="Aristotle and Syllogisms" id="Aristotle_and_Syllogisms">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Aristotle and Syllogisms
+            </h4>
+          </div>
+          <div>
+            <p><strong>Aristotle</strong>: the founder of logic → systematic study of syllogisms<br>
+              (books are student's notes, not actual books - here is an <a data-tooltip-position="top" aria-label="https://www.csus.edu/indiv/e/eppersonm/hist104a/documents/aristotle%20-%20selections_prioranalytics.pdf" rel="noopener" class="external-link" href="https://www.csus.edu/indiv/e/eppersonm/hist104a/documents/aristotle%20-%20selections_prioranalytics.pdf" target="_blank">excerpt</a>)</p>
+          </div>
+          <div>
+            <blockquote>
+              <p>Syllogisms: discourse in which, certain things being stated...</p>
+            </blockquote>
+          </div>
+          <div>
+            <p>3 valid syllogisms:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>all P are M and all M are S → all P are S
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>no P is M and all M are S → no P is S
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>all M are ...
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 data-heading="Limitations" id="Limitations">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Limitations
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>many valid deductions are not syllogisms
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>no calculus for long chains of deductions
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-heading="Boole and Propositional Logic" id="Boole_and_Propositional_Logic">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Boole and Propositional Logic
+            </h4>
+          </div>
+          <div>
+            <p>(2000 year jump lmao)</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>atomic propositions: can be TRUE or FALSE
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>operators are used to link propositions: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2227"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2228"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-cAC"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo>∧</mo>
+                        <mo>,</mo>
+                        <mo>∨</mo>
+                        <mo>,</mo>
+                        <mi mathvariant="normal">¬</mi>
+                        <mo>,</mo>
+                        <mo>…</mo>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>no quantification
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>given 2 propositions, there are 4 possible situations/worlds</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>in that context, <strong>B is a consequence of A</strong> means B is true in all worlds in which A is true
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>tautologies are true in all worlds
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-heading="Predicate Logic" id="Predicate_Logic">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Predicate Logic
+            </h4>
+          </div>
+          <div>
+            <p>Frege, Peano, Russell</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>proofs were still being conducted using natural language
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>logic was needed as a formal tool for avoiding contradictions
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>use of predicate logic:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>relations between entities
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>formulate <strong>existential</strong> and <strong>universal</strong> statements
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-heading="Logic in Computer Science" id="Logic_in_Computer_Science">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Logic in Computer Science
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><strong>Shannon</strong> proposed using propositional logic to describe and optimize electromechanical circuits
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><strong>Newell, SImon, Robinson</strong> developed first systems for mechanization of logcial deduction
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 data-heading="Applications" id="Applications">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Applications
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>circuit design
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>models and specifications
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>verification
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>databases
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div>AI
+              </li>
+              <li data-line="5">
+                <div class="list-bullet"></div>logic programming
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>Dijkstra: "informatics = Very Large Scale Application of Logics"</p>
+          </div>
+          <div>
+            <p>Gottlob: "Computer science is the continuation of logic by other means"</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Klausewitz: prussian war theoretician: "War is the continuation of diplomacy by other means"
+              </li>
+            </ul>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -16136,18 +16498,85 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
           <div class="outline-header">
             <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
           </div>
-          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Logic">
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#1_Introduction_to_Logic">
               <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div><span class="outline-item-title">Logic</span>
+                </svg></div><span class="outline-item-title">1 Introduction to Logic</span>
             </a>
             <div class="outline-item-children">
-              <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Propositional_Logic">
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Basic_Terms_and_Background">
                   <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                       <path d="M3 8L12 17L21 8"></path>
-                    </svg></div><span class="outline-item-title">Propositional Logic</span>
+                    </svg></div><span class="outline-item-title">Basic Terms and Background</span>
                 </a>
-                <div class="outline-item-children"></div>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Definition:_Logical_Inferences">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Definition: Logical Inferences</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Logic_Facts">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Logic Facts</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#History_of_Logic">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">History of Logic</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Aristotle_and_Syllogisms">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Aristotle and Syllogisms</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Limitations">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Limitations</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Boole_and_Propositional_Logic">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Boole and Propositional Logic</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Predicate_Logic">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Predicate Logic</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Logic_in_Computer_Science">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">Logic in Computer Science</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Applications">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Applications</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

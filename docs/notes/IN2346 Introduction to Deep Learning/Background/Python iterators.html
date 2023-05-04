@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Logic</title>
+  <title>Python iterators</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
@@ -15674,10 +15674,10 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
 
 
   <script id="relative-paths">
-    let rootPath = "../..";
-    let mediaPath = "../../media";
-    let jsPath = "../../scripts";
-    let cssPath = "../../styles";
+    let rootPath = "../../..";
+    let mediaPath = "../../../media";
+    let jsPath = "../../../scripts";
+    let cssPath = "../../../styles";
   </script>
 
   <script>
@@ -16089,42 +16089,241 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
     <div class="center-content">
       <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
         <div>
-          <h1 id="Logic">
+          <h1 id="Python_iterators">
             <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                 <path d="M3 8L12 17L21 8"></path>
-              </svg></div>Logic
+              </svg></div>Python iterators
           </h1>
         </div>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
           <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
           <div class="mod-header"></div>
           <div>
-            <hr>
+            <p>This post is meant for those who are not familiar with the <strong>iterator / generator</strong>&nbsp;functionalities of python, and wish to arrive more prepared to the exercise 03's release.</p>
           </div>
           <div>
-            <p><a class="internal-link" data-href="Logic - Organizational.md" href="Logic - Organizational.html" target="_self" rel="noopener">Logic - Organizational</a></p>
-          </div>
-          <div>
-            <p><a class="internal-link" data-href="1 Introduction to Logic.md" href="1 Introduction to Logic.html" target="_self" rel="noopener">1 Introduction to Logic</a></p>
-          </div>
-          <div>
-            <h4 data-heading="Propositional Logic" id="Propositional_Logic">
+            <h2 data-heading="What is an iterator / generator" id="What_is_an_iterator_/_generator">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Propositional Logic
-            </h4>
+                </svg></div>What is an iterator / generator
+            </h2>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.1 Basics of Propositional Logic.md" href="2.1 Basics of Propositional Logic.html" target="_self" rel="noopener">2.1 Basics of Propositional Logic</a></p>
+            <p>An <strong>iterator</strong> is a python object that can be iterated upon, meaning that you can traverse through all the values. A python list (e, g. [1, 2, 3]) could be looked at as an iterator, because we can iterate over it and access the elements inside it.&nbsp;</p>
           </div>
           <div>
-            <p><a data-href="2.2 Equivalences in Propositional Logic.md" href="2.2 Equivalences in Propositional Logic.html" class="internal-link" target="_self" rel="noopener">2.2 Equivalences in Propositional Logic.md</a></p>
+            <p>A <strong>generator</strong> is a function that we could be used as an iterator. Also, a python class could be a generator, by implementing its corresponding function <strong>iter</strong>().</p>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.3 Normal Forms in Propositional Logic.md" href="2.3 Normal Forms in Propositional Logic.html" target="_self" rel="noopener">2.3 Normal Forms in Propositional Logic</a></p>
+            <h2 data-heading="How to implement an iterator / generator?" id="How_to_implement_an_iterator_/_generator?">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>How to implement an iterator / generator?
+            </h2>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.4 Compactness in Propositional Logic.md" href="2.4 Compactness in Propositional Logic.html" target="_self" rel="noopener">2.4 Compactness in Propositional Logic</a></p>
+            <pre><code>def regular_foo():  
+&nbsp; &nbsp; indx = 0  
+&nbsp; &nbsp; return_list = []  
+&nbsp; &nbsp; while indx &lt; 10:  
+&nbsp; &nbsp; &nbsp; &nbsp; return_list.append(indx)  
+&nbsp; &nbsp; &nbsp; &nbsp; indx += 1  
+&nbsp; &nbsp;&nbsp;  
+&nbsp; &nbsp; return return_list
+
+def myIterartor():  
+&nbsp; &nbsp; indx = 0  
+&nbsp; &nbsp; while indx &lt; 10:  
+&nbsp; &nbsp; &nbsp; &nbsp; yield indx  
+&nbsp; &nbsp; &nbsp; &nbsp; indx += 1&nbsp; 
+
+if __name__ == '__main__': 
+&nbsp; &nbsp;&nbsp;  
+&nbsp; &nbsp; # for loop 1  
+&nbsp; &nbsp; for x in regular_foo():  
+&nbsp; &nbsp; &nbsp; &nbsp; print(x)
+
+&nbsp; &nbsp; # for loop 2 
+&nbsp; &nbsp; for x in myIterartor():  
+&nbsp; &nbsp; &nbsp; &nbsp; print(x) 
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h5 data-heading="Distinction between the **return** and the **yield** statements" id="Distinction_between_the_return_and_the_yield_statements">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Distinction between the <strong>return</strong> and the <strong>yield</strong> statements
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>
+                <p>regular_foo(): runs the code line-by-line from indx = 0 to return return_list, and finish the <strong>scope</strong> of the function</p>
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>next time regular_foo() is called, the same process happens
+                  </li>
+                  <li data-line="2">
+                    <div class="list-bullet"></div>
+                    <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                        <path d="M3 8L12 17L21 8"></path>
+                      </svg></div>loop 1:
+                    <ul class="has-list-bullet">
+                      <li data-line="3">
+                        <div class="list-bullet"></div>&nbsp;run the function and load the list of numbers between 0 and 9 to the <strong>RAM</strong>.
+                      </li>
+                      <li data-line="4">
+                        <div class="list-bullet"></div>&nbsp;return that list to the <strong>outer scope</strong> of the main function.
+                      </li>
+                      <li data-line="5">
+                        <div class="list-bullet"></div>&nbsp;run the for-loop on the returned list, and print all the numbers within, 1-by-1.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="7">
+                <div class="list-bullet"></div>
+                <p>for my_iterartor(), on the other hand, the process is slightly different:<br>
+                  -&nbsp; for loop 2 runs the first iteration. </p>
+              </li>
+              <li data-line="9">
+                <div class="list-bullet"></div>
+                <p>&nbsp;Enter the function for the first time, and run line-by-line until the <strong>yield</strong> statement. </p>
+              </li>
+              <li data-line="10">
+                <div class="list-bullet"></div>
+                <p>The function's state, including the pointer to the executed line, is saved to the memory. </p>
+              </li>
+              <li data-line="11">
+                <div class="list-bullet"></div>
+                <p>&nbsp;Return the value of indx (0) to the <strong>outer scope</strong>. Now x == 0. </p>
+              </li>
+              <li data-line="12">
+                <div class="list-bullet"></div>
+                <p>Print the value of x&nbsp; → &nbsp;0. </p>
+              </li>
+              <li data-line="13">
+                <div class="list-bullet"></div>
+                <p>Enter the function again, in the next iteration. </p>
+              </li>
+              <li data-line="14">
+                <div class="list-bullet"></div>
+                <p><strong>The most crucial notion</strong> - we enter my_iterartor() again, but now, in comparison to the regular call of a function, the function state is <strong>relaoded</strong>, and we now stand on the line indx += 1.&nbsp; </p>
+              </li>
+              <li data-line="15">
+                <div class="list-bullet"></div>
+                <p>We start the second iteration of the while loop, and <strong>yield</strong> the value 1. </p>
+              </li>
+              <li data-line="16">
+                <div class="list-bullet"></div>
+                <p>This loop continues, until the while loop within my_iterator() finishes, and the function <strong>returns</strong> and finishes, i.e. it doesn't generate anything else.</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>What's the main difference here? The regular_foo() loads all the numbers to the RAM, returns it, and then we iterate over the array and print its elements. The iterator, on the other hand, loads each one of the elements at a time, not overloading the RAM.&nbsp;</p>
+          </div>
+          <div>
+            <p>Note, that this characteristic of the iterator is important to deep learning, because real-world data could be <strong>super heavy,</strong> for example when we want to train models on 3D data. If we try to load all the dataset to the RAM, with most common setups, the program will just crush. For those who see themselves going into this amazing world, the idea of how to construct a Dataloader is a <strong>corner-stone</strong>.</p>
+          </div>
+          <div>
+            <p>Will be relevant only after exercise 03 is out:</p>
+          </div>
+          <div>
+            <p><code>class Dataset():</code> </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp;&nbsp;<br>
+              <code>def __iter__(self):</code><br>
+              <code>indx = 0</code><br>
+              <code>while indx &lt; 10:</code><br>
+              <code>yield indx</code><br>
+              <code>indx += 1</code>&nbsp;
+            </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+              <code>if __name__ == '__main__':</code>
+            </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp;&nbsp;<br>
+              <code>dataset = Dataset()</code><br>
+              <code>for x in dataset:</code><br>
+              <code>print(x)</code>
+            </p>
+          </div>
+          <div>
+            <p>For a class object to become an iterator / generator, we need to implement its corresponding <strong>iter</strong>() function, so it could be iterated over and generate data.&nbsp;</p>
+          </div>
+          <div>
+            <p><strong>Common mistakes:</strong></p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>Use the yield statement within a <strong>nested function:</strong>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p><code>class Dataset():</code> </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp;&nbsp;<br>
+              <code>def __iter__(self):</code>
+            </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+              <code>def nested_function(x)</code><br>
+              <code>yield x</code>
+            </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+              <code>indx = 0</code><br>
+              <code>numbers = []</code><br>
+              <code>while indx &lt; 10:</code><br>
+              <code>numbers.append(nested_function(indx))</code><br>
+              <code>indx += 1</code>&nbsp;
+            </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+              <code>return iter(numbers)</code>
+            </p>
+          </div>
+          <div>
+            <p><code>if __name__ == '__main__':</code> </p>
+          </div>
+          <div>
+            <p>&nbsp; &nbsp;&nbsp;<br>
+              <code>dataset = Dataset()</code><br>
+              <code>for x in dataset:</code><br>
+              <code>print(x)</code>
+            </p>
+          </div>
+          <div>
+            <p>We've encountered that many of you have implemented their generators in that fashion, sometimes without a return statement. Here, the <strong>yield</strong> statement returns a value from within the scope of nested_function() back to the scope of <strong>iter</strong>(), but not to the main, where the dataset is iterated over. That means that your iterator operates exactly like a regular function, and when it is called in for x in dataset it will run all the lines of code and load everything to the RAM, before x even gets anything.</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>For those of you who don't use any <strong>return</strong> statemnet, you return the default value of a python fucntion: None. That's why you guys get errors related to a Nonetype object.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>For any questions, let's start a discussion here.</p>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -16136,18 +16335,33 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
           <div class="outline-header">
             <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
           </div>
-          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Logic">
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Python_iterators">
               <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div><span class="outline-item-title">Logic</span>
+                </svg></div><span class="outline-item-title">Python iterators</span>
             </a>
             <div class="outline-item-children">
-              <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Propositional_Logic">
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#What_is_an_iterator_/_generator">
                   <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                       <path d="M3 8L12 17L21 8"></path>
-                    </svg></div><span class="outline-item-title">Propositional Logic</span>
+                    </svg></div><span class="outline-item-title">What is an iterator / generator</span>
                 </a>
                 <div class="outline-item-children"></div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#How_to_implement_an_iterator_/_generator?">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">How to implement an iterator / generator?</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Distinction_between_the_return_and_the_yield_statements">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Distinction between the return and the yield statements</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

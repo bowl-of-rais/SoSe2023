@@ -97,7 +97,7 @@
               "state": {
                 "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
                 "viewState": {
-                  "x": 420.6126077654702,
+                  "x": 536.6801682193361,
                   "y": 583.6777133744752,
                   "zoom": -1.4243595692284243
                 }
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
+                "file": "notes/IN2346 Introduction to Deep Learning/1. Machine Learning Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -228,7 +228,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
+                "file": "notes/IN2346 Introduction to Deep Learning/1. Machine Learning Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +251,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas"
+                "file": "notes/IN2346 Introduction to Deep Learning/1. Machine Learning Basics.md"
               }
             }
           },
@@ -284,51 +284,52 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "cc3209109b07de32",
+  "active": "57129b6a8a314595",
   "lastOpenFiles": [
+    "index.md",
+    "notes/Advanced ML - Deep Generative Models/0. Introduction.md",
+    "notes/Advanced ML - Deep Generative Models/2.1. Variational inference.md",
+    "notes/Advanced ML - Deep Generative Models/2.2. Variational Autoencoder.md",
+    "notes/Advanced ML - Deep Generative Models/3. Generative Adversarial Networks.md",
+    "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
+    "notes/Advanced ML - Deep Generative Models/4. Denoising Diffusion.md",
+    "notes/Advanced ML - Deep Generative Models/Overview Advanced ML - Deep Generative Models.md",
+    "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
+    "notes/IN2049 Logic/1 Introduction to Logic.md",
+    "notes/IN2049 Logic/2.3 Normal Forms in Propositional Logic.md",
+    "notes/IN2049 Logic/2.4 Compactness in Propositional Logic.md",
+    "notes/IN2049 Logic/2.1 Basics of Propositional Logic.md",
+    "notes/IN2049 Logic/2.5 Resolution.md",
+    "notes/IN2049 Logic/Logic - Organizational.md",
+    "notes/IN2049 Logic/Logic.md",
     "notes/IN2346 Introduction to Deep Learning/1. Machine Learning Basics.md",
+    "notes/IN2346 Introduction to Deep Learning/10. CNNs.md",
+    "notes/IN2346 Introduction to Deep Learning/11. RNNs.md",
+    "notes/IN2346 Introduction to Deep Learning/12. Advanced DL architectures.md",
+    "notes/IN2346 Introduction to Deep Learning/6. Optimization and Backpropagation.md",
+    "notes/IN2346 Introduction to Deep Learning/5. Computational Graphs.md",
+    "notes/IN2346 Introduction to Deep Learning/7. Scaling Optimization to Large Data.md",
+    "notes/IN2346 Introduction to Deep Learning/8. Stochastic Gradient Descent.md",
+    "notes/IN2346 Introduction to Deep Learning/9. Training Neural Networks.md",
+    "notes/IN2346 Introduction to Deep Learning/Introduction to Deep Learning.md",
     "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
-    "notes/IN2346 Introduction to Deep Learning/2. Basics of Neural Networks.md",
     "notes/IN2346 Introduction to Deep Learning/computegraph_mse.svg",
     "notes/IN2346 Introduction to Deep Learning/computational-graph.svg",
     "notes/IN2346 Introduction to Deep Learning/NN-layer-structure.svg",
-    "notes/ML for Graphs and Sequential Data/1.4 Neural Network Approaches.md",
     "notes/ML for Graphs and Sequential Data/MLGS - Cheatsheet.canvas",
     "notes/ML for Graphs and Sequential Data/attention.svg",
     "notes/IN2346 Introduction to Deep Learning/2-layer network.svg",
-    "notes/IN2346 Introduction to Deep Learning/3. Maximum Likelihood.md",
-    "notes/Advanced ML - Deep Generative Models/2.1. Variational inference.md",
-    "notes/IN2346 Introduction to Deep Learning/2. Linear Regression.md",
     "notes/Advanced ML - Deep Generative Models/DGM - Cheatsheet.canvas",
-    "notes/ML for Graphs and Sequential Data/Overview ML for Graphs and Sequential Data.md",
     "notes/assets/8egXBCs.gif",
     "notes/assets/8egXBCs.gif.crdownload",
     "notes/assets/Pasted image 20230504101118.png",
     "notes/Advanced ML - Deep Generative Models/LVMs.svg",
-    "notes/IN2346 Introduction to Deep Learning/Background/Python iterators.md",
     "notes/IN2346 Introduction to Deep Learning/Background",
     "notes/ML for Graphs and Sequential Data/RNN-unrolled.svg",
     "notes/ML for Graphs and Sequential Data/RNN block.svg",
     "notes/IN2049 Logic/Logic - Cheatsheet.canvas",
-    "notes/ML for Graphs and Sequential Data/1.3 Hidden Markov Models.md",
-    "notes/IN2049 Logic/2.3 Normal Forms in Propositional Logic.md",
-    "notes/IN2049 Logic/2.5 Resolution.md",
-    "notes/IN2049 Logic/2.1 Basics of Propositional Logic.md",
-    "notes/IN2049 Logic/2.4 Compactness in Propositional Logic.md",
-    "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
-    "notes/IN2049 Logic/Logic.md",
-    "notes/IN2049 Logic/Logic - Organizational.md",
-    "notes/Advanced ML - Deep Generative Models/Overview Advanced ML - Deep Generative Models.md",
-    "notes/ML for Graphs and Sequential Data/1.2 Markov Chains.md",
-    "notes/ML for Graphs and Sequential Data/1.1 Autoregressive Models.md",
-    "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
-    "notes/IN2049 Logic/1 Introduction to Logic.md",
-    "lit.md",
     "lit.bib",
-    "references.md",
-    "notes/ML recap/Untitled.md",
     "notes/ML recap",
-    "notes/IN2346 Introduction to Deep Learning/Untitled.md",
     "notes",
     "notes/assets",
     "New folder",

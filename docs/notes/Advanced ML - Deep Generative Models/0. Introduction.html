@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Logic</title>
+  <title>0. Introduction</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
@@ -16089,10 +16089,10 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
     <div class="center-content">
       <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
         <div>
-          <h1 id="Logic">
+          <h1 id="0._Introduction">
             <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                 <path d="M3 8L12 17L21 8"></path>
-              </svg></div>Logic
+              </svg></div>0. Introduction
           </h1>
         </div>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
@@ -16102,29 +16102,165 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
             <hr>
           </div>
           <div>
-            <p><a class="internal-link" data-href="Logic - Organizational.md" href="Logic - Organizational.html" target="_self" rel="noopener">Logic - Organizational</a></p>
-          </div>
-          <div>
-            <p><a class="internal-link" data-href="1 Introduction to Logic.md" href="1 Introduction to Logic.html" target="_self" rel="noopener">1 Introduction to Logic</a></p>
-          </div>
-          <div>
-            <h4 data-heading="Propositional Logic" id="Propositional_Logic">
+            <h2 data-heading="Motivation" id="Motivation">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Propositional Logic
+                </svg></div>Motivation
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>ML models that can generate data → complex distributions over real-world data (images, graphs, audio signals...)
+              </li>
+            </ul>
+          </div>
+          <div>
+            <hr>
+          </div>
+          <div>
+            <h2 data-heading="About generative models" id="About_generative_models">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>About generative models
+            </h2>
+          </div>
+          <div>
+            <h5 data-heading="1. Deterministic Generative Models" id="1._Deterministic_Generative_Models">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1. Deterministic Generative Models
+            </h5>
+          </div>
+          <div>
+            <p>e.g. computer graphics</p>
+          </div>
+          <div>
+            <pre><code>Image = Renderer(object = cube, color = red, size=..., position = ..., ...)
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h5 data-heading="2. Statistical Generative Models" id="2._Statistical_Generative_Models">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>2. Statistical Generative Models
+            </h5>
+          </div>
+          <div>
+            <blockquote>
+              <p>combine data and prior knowledge (model family, loss function, optimization) to learn a <strong>probability distribution</strong></p>
+            </blockquote>
+          </div>
+          <div>
+            <h4 data-heading="Desiderata for Statistical Generative Models" id="Desiderata_for_Statistical_Generative_Models">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Desiderata for Statistical Generative Models
             </h4>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.1 Basics of Propositional Logic.md" href="2.1 Basics of Propositional Logic.html" target="_self" rel="noopener">2.1 Basics of Propositional Logic</a></p>
+            <ol>
+              <li data-line="0"><strong>efficient sampling</strong>: we want to easily sample new instances <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c223C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msub>
+                          <mi>x</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>n</mi>
+                            <mi>e</mi>
+                            <mi>w</mi>
+                          </mrow>
+                        </msub>
+                        <mo>∼</mo>
+                        <mi>p</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>x</mi>
+                        <mo stretchy="false">)</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> that is similar to the training data</li>
+              <li data-line="1"><strong>efficient likelihood estimation</strong>: we also want to easily evaluate <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>p</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>x</mi>
+                        <mo stretchy="false">)</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> e.g. for MLE</li>
+              <li data-line="2"><strong>extract features</strong>: we want to <em>optionally</em> be able to extract features/representations that capture the important aspects</li>
+            </ol>
           </div>
           <div>
-            <p><a data-href="2.2 Equivalences in Propositional Logic.md" href="2.2 Equivalences in Propositional Logic.html" class="internal-link" target="_self" rel="noopener">2.2 Equivalences in Propositional Logic.md</a></p>
+            <h4 data-heading="Applications of Generative Models" id="Applications_of_Generative_Models">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Applications of Generative Models
+            </h4>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.3 Normal Forms in Propositional Logic.md" href="2.3 Normal Forms in Propositional Logic.html" target="_self" rel="noopener">2.3 Normal Forms in Propositional Logic</a></p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>image generation
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>3D graphics, fluid dynamics
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>speech + music synthesis
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>drug discovery
+              </li>
+            </ul>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.4 Compactness in Propositional Logic.md" href="2.4 Compactness in Propositional Logic.html" target="_self" rel="noopener">2.4 Compactness in Propositional Logic</a></p>
+            <hr>
+          </div>
+          <div>
+            <h2 data-heading="Complexity of real-world data" id="Complexity_of_real-world_data">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Complexity of real-world data
+            </h2>
+          </div>
+          <div>
+            <p>we need to be able to model real-world data which is usually</p>
+          </div>
+          <div>
+            <blockquote>
+              <p>multi-modal and asymmetric</p>
+            </blockquote>
+          </div>
+          <div>
+            <h5 data-heading="Continuous distribution over high-dim data: Why not use Gaussian [mixture models](https://en.wikipedia.org/wiki/Mixture_model)?" id="Continuous_distribution_over_high-dim_data:_Why_not_use_Gaussian_mixture_models?">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Continuous distribution over high-dim data: Why not use Gaussian <a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Mixture_model" rel="noopener" class="external-link" href="https://en.wikipedia.org/wiki/Mixture_model" target="_blank">mixture models</a>?
+            </h5>
+          </div>
+          <div>
+            <p>similar to polynomials: can approximate any function with sufficiently high degreee<br>
+              → often impractical</p>
+          </div>
+          <div>
+            <h5 data-heading="Discrete distribution over high-dim data" id="Discrete_distribution_over_high-dim_data">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Discrete distribution over high-dim data
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>number of parameters grows exponentially with dimension
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>think binary encoding: image with <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>N</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> pixels needs <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msup>
+                          <mn>2</mn>
+                          <mi>N</mi>
+                        </msup>
+                        <mo>−</mo>
+                        <mn>1</mn>
+                      </math></mjx-assistive-mml></mjx-container></span> values
+              </li>
+            </ul>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -16136,18 +16272,76 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
           <div class="outline-header">
             <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
           </div>
-          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Logic">
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#0._Introduction">
               <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div><span class="outline-item-title">Logic</span>
+                </svg></div><span class="outline-item-title">0. Introduction</span>
             </a>
             <div class="outline-item-children">
-              <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Propositional_Logic">
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Motivation">
                   <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                       <path d="M3 8L12 17L21 8"></path>
-                    </svg></div><span class="outline-item-title">Propositional Logic</span>
+                    </svg></div><span class="outline-item-title">Motivation</span>
                 </a>
                 <div class="outline-item-children"></div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#About_generative_models">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">About generative models</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#1._Deterministic_Generative_Models">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">1. Deterministic Generative Models</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#2._Statistical_Generative_Models">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">2. Statistical Generative Models</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Desiderata_for_Statistical_Generative_Models">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Desiderata for Statistical Generative Models</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Applications_of_Generative_Models">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Applications of Generative Models</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Complexity_of_real-world_data">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">Complexity of real-world data</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Continuous_distribution_over_high-dim_data:_Why_not_use_Gaussian_mixture_models?">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Continuous distribution over high-dim data: Why not use Gaussian mixture models?</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Discrete_distribution_over_high-dim_data">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Discrete distribution over high-dim data</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

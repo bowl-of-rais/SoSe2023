@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Logic</title>
+  <title>2.4 Compactness in Propositional Logic</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
@@ -16089,10 +16089,10 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
     <div class="center-content">
       <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
         <div>
-          <h1 id="Logic">
+          <h1 id="2.4_Compactness_in_Propositional_Logic">
             <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                 <path d="M3 8L12 17L21 8"></path>
-              </svg></div>Logic
+              </svg></div>2.4 Compactness in Propositional Logic
           </h1>
         </div>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
@@ -16102,29 +16102,358 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
             <hr>
           </div>
           <div>
-            <p><a class="internal-link" data-href="Logic - Organizational.md" href="Logic - Organizational.html" target="_self" rel="noopener">Logic - Organizational</a></p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>2 families of algorithms:
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>satisfiability: <strong>DPLL</strong>
+                  </li>
+                  <li data-line="2">
+                    <div class="list-bullet"></div>unsatisfiability/validity: <strong>Resolution</strong>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
           <div>
-            <p><a class="internal-link" data-href="1 Introduction to Logic.md" href="1 Introduction to Logic.html" target="_self" rel="noopener">1 Introduction to Logic</a></p>
+            <hr>
           </div>
           <div>
-            <h4 data-heading="Propositional Logic" id="Propositional_Logic">
+            <h2 data-heading="Compactness Theorem" id="Compactness_Theorem">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Propositional Logic
+                </svg></div>Compactness Theorem
+            </h2>
+          </div>
+          <div>
+            <p><a href="#compactnesstheorem" class="tag" target="_blank" rel="noopener">#compactnesstheorem</a></p>
+          </div>
+          <div>
+            <blockquote>
+              <p>a set <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> of formulas is <strong>satisfiable</strong> iff <strong>every finite subset</strong> of <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> is <strong>satisfiable</strong><br>
+                or: a set <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> of formulas is <strong>un</strong>satisfiable iff <strong>some</strong> finite subset of <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> is <strong>un</strong>satisfiable</p>
+            </blockquote>
+          </div>
+          <div>
+            <p>intuition: finite witness</p>
+          </div>
+          <div>
+            <p>proof:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> → every finite subset: trivial
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> ← every finite subset: prove there is a model for <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-heading="Proving the compactness theorem" id="Proving_the_compactness_theorem">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Proving the compactness theorem
             </h4>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.1 Basics of Propositional Logic.md" href="2.1 Basics of Propositional Logic.html" target="_self" rel="noopener">2.1 Basics of Propositional Logic</a></p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>terminology: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c41 TEX-C"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow data-mjx-texclass="ORD">
+                          <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">A</mi>
+                        </mrow>
+                      </math></mjx-assistive-mml></mjx-container></span> is a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mn>1</mn>
+                          </mrow>
+                        </msub>
+                        <mo>,</mo>
+                        <mo>…</mo>
+                        <mo>,</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>n</mi>
+                          </mrow>
+                        </msub>
+                      </math></mjx-assistive-mml></mjx-container></span> model of <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>T</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> if <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c41 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow data-mjx-texclass="ORD">
+                          <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">A</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>A</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>i</mi>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>i</mi>
+                          </mrow>
+                        </msub>
+                      </math></mjx-assistive-mml></mjx-container></span> and <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c41 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-var" space="4"><mjx-c class="mjx-c22A8 TEX-A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow data-mjx-texclass="ORD">
+                          <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">A</mi>
+                        </mrow>
+                        <mo data-mjx-alternate="1">⊨</mo>
+                        <mi>T</mi>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>define infinite sequence <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mn>1</mn>
+                          </mrow>
+                        </msub>
+                        <mo>,</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mn>2</mn>
+                          </mrow>
+                        </msub>
+                        <mo>,</mo>
+                        <mo>…</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> recursively: <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true" style="position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mtext class="mjx-n" space="4"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c20"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c20"></mjx-c><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c><mjx-c class="mjx-c68"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c76"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-c20"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-c6C"></mjx-c></mjx-mtext></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>n</mi>
+                            <mo>+</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                        <mtext>some&nbsp;</mtext>
+                        <mi>b</mi>
+                        <mo>∈</mo>
+                        <mo fence="false" stretchy="false">{</mo>
+                        <mn>0</mn>
+                        <mo>,</mo>
+                        <mn>1</mn>
+                        <mo fence="false" stretchy="false">}</mo>
+                        <mtext>&nbsp;s.t. all finite&nbsp;</mtext>
+                        <mi>T</mi>
+                        <mo>⊆</mo>
+                        <mi>S</mi>
+                        <mtext>&nbsp;have a&nbsp;</mtext>
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mn>1</mn>
+                          </mrow>
+                        </msub>
+                        <mo>,</mo>
+                        <mo>…</mo>
+                        <mo>,</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>n</mi>
+                          </mrow>
+                        </msub>
+                        <mo>,</mo>
+                        <mi>b</mi>
+                        <mtext>&nbsp;model</mtext>
+                      </math></mjx-assistive-mml></mjx-container></span>i.e. we know all our finite subsets and choose assignments s.t. all subsets stay satisfiable
+              </li>
+            </ul>
           </div>
           <div>
-            <p><a data-href="2.2 Equivalences in Propositional Logic.md" href="2.2 Equivalences in Propositional Logic.html" class="internal-link" target="_self" rel="noopener">2.2 Equivalences in Propositional Logic.md</a></p>
+            <ol>
+              <li data-line="0">
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>for all <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>n</mi>
+                      </math></mjx-assistive-mml></mjx-container></span>, all finite <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>T</mi>
+                        <mo>⊆</mo>
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> have a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mn>1</mn>
+                          </mrow>
+                        </msub>
+                        <mo>,</mo>
+                        <mo>…</mo>
+                        <mo>,</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>n</mi>
+                          </mrow>
+                        </msub>
+                      </math></mjx-assistive-mml></mjx-container></span> model (we can fix the first <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>n</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> variables)
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>proof by induction on <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>n</mi>
+                          </math></mjx-assistive-mml></mjx-container></span>
+                  </li>
+                </ul>
+              </li>
+              <li data-line="2">
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>for <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c42 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow data-mjx-texclass="ORD">
+                          <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">B</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>A</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>i</mi>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>b</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>i</mi>
+                          </mrow>
+                        </msub>
+                      </math></mjx-assistive-mml></mjx-container></span> for all <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>i</mi>
+                      </math></mjx-assistive-mml></mjx-container></span>, we have <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c42 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-var" space="4"><mjx-c class="mjx-c22A8 TEX-A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow data-mjx-texclass="ORD">
+                          <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">B</mi>
+                        </mrow>
+                        <mo data-mjx-alternate="1">⊨</mo>
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> (we set our assignments)
+                <ul class="has-list-bullet">
+                  <li data-line="3">
+                    <div class="list-bullet"></div>reasoning: all formulas have a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <msub>
+                              <mi>b</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mn>1</mn>
+                              </mrow>
+                            </msub>
+                            <mo>,</mo>
+                            <mo>…</mo>
+                            <mo>,</mo>
+                            <msub>
+                              <mi>b</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>m</mi>
+                                <mi>a</mi>
+                                <mi>x</mi>
+                              </mrow>
+                            </msub>
+                          </math></mjx-assistive-mml></mjx-container></span> model
+                  </li>
+                </ul>
+              </li>
+            </ol>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.3 Normal Forms in Propositional Logic.md" href="2.3 Normal Forms in Propositional Logic.html" target="_self" rel="noopener">2.3 Normal Forms in Propositional Logic</a></p>
+            <p>entailment version:</p>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.4 Compactness in Propositional Logic.md" href="2.4 Compactness in Propositional Logic.html" target="_self" rel="noopener">2.4 Compactness in Propositional Logic</a></p>
+            <blockquote>
+              <p>if <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-var" space="4"><mjx-c class="mjx-c22A8 TEX-A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                        <mo data-mjx-alternate="1">⊨</mo>
+                        <mi>F</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> then there is a finite subset <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>M</mi>
+                        <mo>⊆</mo>
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> s.t. <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-var" space="4"><mjx-c class="mjx-c22A8 TEX-A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>M</mi>
+                        <mo data-mjx-alternate="1">⊨</mo>
+                        <mi>F</mi>
+                      </math></mjx-assistive-mml></mjx-container></span></p>
+            </blockquote>
+          </div>
+          <div>
+            <h4 data-heading="Application: Graph Coloring" id="Application:_Graph_Coloring">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Application: Graph Coloring
+            </h4>
+          </div>
+          <div>
+            <blockquote>
+              <p>a finite planar graph has a 4-coloring</p>
+            </blockquote>
+          </div>
+          <div>
+            <blockquote>
+              <p>a planar graph with countably many vertices is 4-colorable</p>
+            </blockquote>
+          </div>
+          <div>
+            <p>proof: </p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>construct set of formulas <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> s.t. <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> satisfiable iff <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>G</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> is 4-colorable
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>by earlier theorem: every finite subgraph is planar and 4-col
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>every finite subset of <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> is sat
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>S</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> is sat by compactness
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>G</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> is 4-col
+              </li>
+            </ul>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -16136,18 +16465,33 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
           <div class="outline-header">
             <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
           </div>
-          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Logic">
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#2.4_Compactness_in_Propositional_Logic">
               <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div><span class="outline-item-title">Logic</span>
+                </svg></div><span class="outline-item-title">2.4 Compactness in Propositional Logic</span>
             </a>
             <div class="outline-item-children">
-              <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Propositional_Logic">
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Compactness_Theorem">
                   <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                       <path d="M3 8L12 17L21 8"></path>
-                    </svg></div><span class="outline-item-title">Propositional Logic</span>
+                    </svg></div><span class="outline-item-title">Compactness Theorem</span>
                 </a>
-                <div class="outline-item-children"></div>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Proving_the_compactness_theorem">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Proving the compactness theorem</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Application:_Graph_Coloring">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Application: Graph Coloring</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

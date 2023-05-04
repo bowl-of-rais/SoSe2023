@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Logic</title>
+  <title>1.4 Neural Network Approaches</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="UTF-8">
@@ -16089,10 +16089,10 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
     <div class="center-content">
       <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
         <div>
-          <h1 id="Logic">
+          <h1 id="1.4_Neural_Network_Approaches">
             <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                 <path d="M3 8L12 17L21 8"></path>
-              </svg></div>Logic
+              </svg></div>1.4 Neural Network Approaches
           </h1>
         </div>
         <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
@@ -16102,29 +16102,1390 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
             <hr>
           </div>
           <div>
-            <p><a class="internal-link" data-href="Logic - Organizational.md" href="Logic - Organizational.html" target="_self" rel="noopener">Logic - Organizational</a></p>
-          </div>
-          <div>
-            <p><a class="internal-link" data-href="1 Introduction to Logic.md" href="1 Introduction to Logic.html" target="_self" rel="noopener">1 Introduction to Logic</a></p>
-          </div>
-          <div>
-            <h4 data-heading="Propositional Logic" id="Propositional_Logic">
+            <h4 data-heading="Motivation" id="Motivation">
               <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Propositional Logic
+                </svg></div>Motivation
             </h4>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.1 Basics of Propositional Logic.md" href="2.1 Basics of Propositional Logic.html" target="_self" rel="noopener">2.1 Basics of Propositional Logic</a></p>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>representing words to input into a subsequent model
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>words as vectors → keep underlying language properties
+                <ul class="has-list-bullet">
+                  <li data-line="2">
+                    <div class="list-bullet"></div>in particular: similarity
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
           <div>
-            <p><a data-href="2.2 Equivalences in Propositional Logic.md" href="2.2 Equivalences in Propositional Logic.html" class="internal-link" target="_self" rel="noopener">2.2 Equivalences in Propositional Logic.md</a></p>
+            <blockquote>
+              <p>distributional hypothesis: words that appear in similar contexts have similar meanings</p>
+            </blockquote>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.3 Normal Forms in Propositional Logic.md" href="2.3 Normal Forms in Propositional Logic.html" target="_self" rel="noopener">2.3 Normal Forms in Propositional Logic</a></p>
+            <hr>
           </div>
           <div>
-            <p><a class="internal-link" data-href="2.4 Compactness in Propositional Logic.md" href="2.4 Compactness in Propositional Logic.html" target="_self" rel="noopener">2.4 Compactness in Propositional Logic</a></p>
+            <h2 data-heading="Co-occurrence" id="Co-occurrence">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Co-occurrence
+            </h2>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>incorporate context by counting how many times a word appeared besides other words
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>slide window and count co-occurrences → matrix <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>M</mi>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>similar words have similar vectors, but matrix is highdimensional and sparse → dimensionality reduction
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-heading="[SVD](https://de.wikipedia.org/wiki/Singul%C3%A4rwertzerlegung)" id="SVD">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div><a data-tooltip-position="top" aria-label="https://de.wikipedia.org/wiki/Singul%C3%A4rwertzerlegung" rel="noopener" class="external-link" href="https://de.wikipedia.org/wiki/Singul%C3%A4rwertzerlegung" target="_blank">SVD</a>
+            </h4>
+          </div>
+          <div>
+            <p><span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true" style="position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D448 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c3A3"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.059em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                      <mi>M</mi>
+                      <mo>=</mo>
+                      <mi>U</mi>
+                      <mi mathvariant="normal">Σ</mi>
+                      <msup>
+                        <mi>V</mi>
+                        <mi>T</mi>
+                      </msup>
+                    </math></mjx-assistive-mml></mjx-container></span>where the first <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D437 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>D</mi>
+                    </math></mjx-assistive-mml></mjx-container></span> columns of <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D448 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>U</mi>
+                    </math></mjx-assistive-mml></mjx-container></span> are <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D437 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>D</mi>
+                    </math></mjx-assistive-mml></mjx-container></span>-dimensional word vectors<br>
+              → slow to compute, hard to add new words</p>
+          </div>
+          <div>
+            <hr>
+          </div>
+          <div>
+            <h2 data-heading="Word2vec" id="Word2vec">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Word2vec
+            </h2>
+          </div>
+          <div>
+            <p>TASK: prediction of words based on context → <strong>self-supervised learning</strong></p>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>continuous bag-of-words</strong>: predicts word from window
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>weak for rare words
+                  </li>
+                </ul>
+              </li>
+              <li data-line="2">
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div><strong>skip-gram</strong>: predict context from current words
+                <ul class="has-list-bullet">
+                  <li data-line="3">
+                    <div class="list-bullet"></div>rare words must be understood, so good for those
+                  </li>
+                  <li data-line="4">
+                    <div class="list-bullet"></div>slower to train but good for small datasets + rare words
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 data-heading="Skip-gram" id="Skip-gram">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Skip-gram
+            </h3>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>input: one-hot vector <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo>∈</mo>
+                        <msup>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="double-struck">R</mi>
+                          </mrow>
+                          <mi>N</mi>
+                        </msup>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>embedding: project onto <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D437 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>D</mi>
+                      </math></mjx-assistive-mml></mjx-container></span>-dimensions using <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D448 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D437 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>U</mi>
+                        <mo>∈</mo>
+                        <msup>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="double-struck">R</mi>
+                          </mrow>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>N</mi>
+                            <mo>×</mo>
+                            <mi>D</mi>
+                          </mrow>
+                        </msup>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>prediction: obtain probabilities of context words with <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D437 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>X</mi>
+                        <mo>∈</mo>
+                        <msup>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="double-struck">R</mi>
+                          </mrow>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi>D</mi>
+                            <mo>×</mo>
+                            <mi>N</mi>
+                          </mrow>
+                        </msup>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>which combines into <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true" style="position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-mtable style="min-width: 18.671em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-bottom: 0.15em;"><mjx-munder><mjx-row><mjx-base><mjx-mo class="mjx-n"><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c78"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.765em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-under></mjx-row></mjx-munder><mjx-texatom space="2" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c1D53C TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2223"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munder space="4"><mjx-row><mjx-base><mjx-mo class="mjx-n"><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.668em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi></mjx-under></mjx-row></mjx-munder><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c1D53C TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2223"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2223"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munder space="4"><mjx-row><mjx-base style="padding-left: 0.187em;"><mjx-mo class="mjx-lop"><mjx-c class="mjx-c220F TEX-S2"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-under></mjx-row></mjx-munder><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2223"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2223"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D703 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mtext class="mjx-n" space="4"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c78"></mjx-c></mjx-mtext><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D462 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                      <mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt">
+                        <mtr>
+                          <mtd>
+                            <munder>
+                              <mo data-mjx-texclass="OP" movablelimits="true">max</mo>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>θ</mi>
+                              </mrow>
+                            </munder>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi mathvariant="double-struck">E</mi>
+                            </mrow>
+                            <mo stretchy="false">[</mo>
+                            <mi>P</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>S</mi>
+                            <mo>∣</mo>
+                            <msub>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>i</mi>
+                              </mrow>
+                            </msub>
+                            <mo>,</mo>
+                            <mi>θ</mi>
+                            <mo stretchy="false">)</mo>
+                            <mo stretchy="false">]</mo>
+                          </mtd>
+                          <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <munder>
+                              <mo data-mjx-texclass="OP" movablelimits="true">min</mo>
+                              <mi>θ</mi>
+                            </munder>
+                            <mo stretchy="false">(</mo>
+                            <mo>−</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi mathvariant="double-struck">E</mi>
+                            </mrow>
+                            <mo stretchy="false">[</mo>
+                            <mi>P</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>S</mi>
+                            <mo>∣</mo>
+                            <msub>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>i</mi>
+                              </mrow>
+                            </msub>
+                            <mo>,</mo>
+                            <mi>θ</mi>
+                            <mo stretchy="false">)</mo>
+                            <mo stretchy="false">]</mo>
+                            <mo stretchy="false">)</mo>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <mi>P</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>S</mi>
+                            <mo>∣</mo>
+                            <msub>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>i</mi>
+                              </mrow>
+                            </msub>
+                            <mo>,</mo>
+                            <mi>θ</mi>
+                            <mo stretchy="false">)</mo>
+                          </mtd>
+                          <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <munder>
+                              <mo data-mjx-texclass="OP">∏</mo>
+                              <mrow data-mjx-texclass="ORD">
+                                <msub>
+                                  <mi>x</mi>
+                                  <mrow data-mjx-texclass="ORD">
+                                    <mi>k</mi>
+                                  </mrow>
+                                </msub>
+                                <mo>∈</mo>
+                                <mi>S</mi>
+                              </mrow>
+                            </munder>
+                            <mi>P</mi>
+                            <mo stretchy="false">(</mo>
+                            <msub>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>k</mi>
+                              </mrow>
+                            </msub>
+                            <mo>∣</mo>
+                            <msub>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>i</mi>
+                              </mrow>
+                            </msub>
+                            <mo>,</mo>
+                            <mi>θ</mi>
+                            <mo stretchy="false">)</mo>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <mi>P</mi>
+                            <mo stretchy="false">(</mo>
+                            <msub>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>k</mi>
+                              </mrow>
+                            </msub>
+                            <mo>∣</mo>
+                            <msub>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>i</mi>
+                              </mrow>
+                            </msub>
+                            <mo>,</mo>
+                            <mi>θ</mi>
+                            <mo stretchy="false">)</mo>
+                          </mtd>
+                          <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <mtext>softmax</mtext>
+                            <mo stretchy="false">(</mo>
+                            <msub>
+                              <mi>u</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>i</mi>
+                              </mrow>
+                            </msub>
+                            <mi>V</mi>
+                            <msub>
+                              <mo stretchy="false">)</mo>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>k</mi>
+                              </mrow>
+                            </msub>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <h4 data-heading="Training" id="Training">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Training
+            </h4>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>softmax normalization is very costly
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>alternative: <strong>Negative Sampling</strong></p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>each iteration: sample a positive word <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>p</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> in the context of word <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>i</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> and negative word(s) <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>n</mi>
+                      </math></mjx-assistive-mml></mjx-container></span> not in the context
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>train classification
+              </li>
+            </ul>
+          </div>
+          <div>
+            <hr>
+          </div>
+          <div>
+            <h2 data-heading="RNNs" id="RNNs">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>RNNs
+            </h2>
+          </div>
+          <div>
+            <p>reccurent neural network building block:<br>
+              <span alt="RNN block.svg" src="RNN block.svg" class="internal-embed media-embed image-embed is-loaded"><img alt="RNN block.svg" src="data:audio/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxODFweCIgd2lkdGg9Ijg4LjgzMzMzMzMzMzMzMzM2cHgiIHZpZXdCb3g9Ii0xMCAtMTAgMTA4LjgzMzMzMzMzMzMzMzM2IDIwMSIgY29udGVudD0iJmx0O214R3JhcGhNb2RlbCBkeD0mcXVvdDszMjgmcXVvdDsgZHk9JnF1b3Q7MjIwJnF1b3Q7IGdyaWQ9JnF1b3Q7MSZxdW90OyBncmlkU2l6ZT0mcXVvdDsxMCZxdW90OyBndWlkZXM9JnF1b3Q7MSZxdW90OyB0b29sdGlwcz0mcXVvdDsxJnF1b3Q7IGNvbm5lY3Q9JnF1b3Q7MSZxdW90OyBhcnJvd3M9JnF1b3Q7MSZxdW90OyBmb2xkPSZxdW90OzEmcXVvdDsgcGFnZT0mcXVvdDswJnF1b3Q7IHBhZ2VTY2FsZT0mcXVvdDsxJnF1b3Q7IHBhZ2VXaWR0aD0mcXVvdDs4MjcmcXVvdDsgcGFnZUhlaWdodD0mcXVvdDsxMTY5JnF1b3Q7IG1hdGg9JnF1b3Q7MCZxdW90OyBzaGFkb3c9JnF1b3Q7MCZxdW90OyZndDsmbHQ7cm9vdCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzAmcXVvdDsvJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MCZxdW90Oy8mZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDs2JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VTdHlsZT1ub25lO2h0bWw9MTtleGl0WD0wLjU7ZXhpdFk9MDtleGl0RHg9MDtleGl0RHk9MDtlbnRyeVg9MC41O2VudHJ5WT0xO2VudHJ5RHg9MDtlbnRyeUR5PTA7JnF1b3Q7IGVkZ2U9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyBzb3VyY2U9JnF1b3Q7MiZxdW90OyB0YXJnZXQ9JnF1b3Q7MyZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzImcXVvdDsgdmFsdWU9JnF1b3Q7Tk4mcXVvdDsgc3R5bGU9JnF1b3Q7cm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7ZmlsbENvbG9yPSM2NkIyRkY7JnF1b3Q7IHZlcnRleD0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHg9JnF1b3Q7MTQwJnF1b3Q7IHk9JnF1b3Q7OTAmcXVvdDsgd2lkdGg9JnF1b3Q7NjAmcXVvdDsgaGVpZ2h0PSZxdW90OzQwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzMmcXVvdDsgdmFsdWU9JnF1b3Q7eSZxdW90OyBzdHlsZT0mcXVvdDtlbGxpcHNlO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YXNwZWN0PWZpeGVkO2ZpbGxDb2xvcj0jOTk5OTk5OyZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90OzE1MCZxdW90OyB5PSZxdW90OzIwJnF1b3Q7IHdpZHRoPSZxdW90OzQwJnF1b3Q7IGhlaWdodD0mcXVvdDs0MCZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90Oy8mZ3Q7Jmx0Oy9teENlbGwmZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDs1JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VTdHlsZT1ub25lO2h0bWw9MTtleGl0WD0wLjU7ZXhpdFk9MDtleGl0RHg9MDtleGl0RHk9MDtlbnRyeVg9MC41O2VudHJ5WT0xO2VudHJ5RHg9MDtlbnRyeUR5PTA7JnF1b3Q7IGVkZ2U9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyBzb3VyY2U9JnF1b3Q7NCZxdW90OyB0YXJnZXQ9JnF1b3Q7MiZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzQmcXVvdDsgdmFsdWU9JnF1b3Q7eCZxdW90OyBzdHlsZT0mcXVvdDtlbGxpcHNlO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YXNwZWN0PWZpeGVkO2ZpbGxDb2xvcj0jOTk5OTk5OyZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90OzE1MCZxdW90OyB5PSZxdW90OzE2MCZxdW90OyB3aWR0aD0mcXVvdDs0MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NDAmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7NyZxdW90OyBzdHlsZT0mcXVvdDtlZGdlU3R5bGU9bm9uZTtodG1sPTE7ZXhpdFg9MTtleGl0WT0wLjI1O2V4aXREeD0wO2V4aXREeT0wO2VudHJ5WD0xO2VudHJ5WT0wLjc1O2VudHJ5RHg9MDtlbnRyeUR5PTA7JnF1b3Q7IGVkZ2U9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyBzb3VyY2U9JnF1b3Q7MiZxdW90OyB0YXJnZXQ9JnF1b3Q7MiZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7Jmd0OyZsdDtBcnJheSBhcz0mcXVvdDtwb2ludHMmcXVvdDsmZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDsyMjAmcXVvdDsgeT0mcXVvdDs5MCZxdW90Oy8mZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDsyMjAmcXVvdDsgeT0mcXVvdDsxMzAmcXVvdDsvJmd0OyZsdDsvQXJyYXkmZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDsvcm9vdCZndDsmbHQ7L214R3JhcGhNb2RlbCZndDsiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48cGF0aCBkPSJNIDMwLjUgNzAuNSBMIDMwLjUgNDYuODciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxwYXRoIGQ9Ik0gMzAuNSA0MS42MiBMIDM0IDQ4LjYyIEwgMzAuNSA0Ni44NyBMIDI3IDQ4LjYyIFoiIGZpbGw9IiNmMGYwZjAiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxyZWN0IHg9IjAuNSIgeT0iNzAuNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNiIgcnk9IjYiIGZpbGw9IiM2NmIyZmYiIHN0cm9rZT0iI2YwZjBmMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48Zz48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiB1bnNhZmUgY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IHVuc2FmZSBjZW50ZXI7IHdpZHRoOiA1OHB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDkxcHg7IG1hcmdpbi1sZWZ0OiAycHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj5OTjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PGVsbGlwc2UgY3g9IjMwLjUiIGN5PSIyMC41IiByeD0iMjAiIHJ5PSIyMCIgZmlsbD0iIzk5OTk5OSIgc3Ryb2tlPSIjZjBmMGYwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDM4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMjFweDsgbWFyZ2luLWxlZnQ6IDEycHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj55PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjwvZz48cGF0aCBkPSJNIDMwLjUgMTQwLjUgTCAzMC41IDExNi44NyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PHBhdGggZD0iTSAzMC41IDExMS42MiBMIDM0IDExOC42MiBMIDMwLjUgMTE2Ljg3IEwgMjcgMTE4LjYyIFoiIGZpbGw9IiNmMGYwZjAiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxlbGxpcHNlIGN4PSIzMC41IiBjeT0iMTYwLjUiIHJ4PSIyMCIgcnk9IjIwIiBmaWxsPSIjOTk5OTk5IiBzdHJva2U9IiNmMGYwZjAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMzhweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxNjFweDsgbWFyZ2luLWxlZnQ6IDEycHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj54PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjwvZz48cGF0aCBkPSJNIDYwLjUgODAuNSBMIDcxLjU2IDc0Ljk3IFEgODAuNSA3MC41IDgwLjUgODAuNSBMIDgwLjUgMTAwLjUgUSA4MC41IDExMC41IDczLjM1IDEwNi45MiBMIDY2LjIgMTAzLjM1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48cGF0aCBkPSJNIDYxLjUgMTAxIEwgNjkuMzMgMTAxIEwgNjYuMiAxMDMuMzUgTCA2Ni4yIDEwNy4yNiBaIiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48L3N2Zz4="></span>
+            </p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>problem types
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>one to many
+                  </li>
+                  <li data-line="2">
+                    <div class="list-bullet"></div>many to one
+                  </li>
+                  <li data-line="3">
+                    <div class="list-bullet"></div>many to many
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-heading="Definition" id="Definition">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Definition
+            </h3>
+          </div>
+          <div>
+            <p>start with inputs <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo fence="false" stretchy="false">{</mo>
+                      <msup>
+                        <mi>x</mi>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </msup>
+                      <mo>,</mo>
+                      <mo>…</mo>
+                      <mo>,</mo>
+                      <msup>
+                        <mi>x</mi>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo stretchy="false">(</mo>
+                          <mi>N</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </msup>
+                      <mo fence="false" stretchy="false">}</mo>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <p>hidden state <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <msup>
+                        <mi>h</mi>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo stretchy="false">(</mo>
+                          <mi>t</mi>
+                          <mo>−</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </msup>
+                    </math></mjx-assistive-mml></mjx-container></span> represents sequence <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo fence="false" stretchy="false">{</mo>
+                      <msup>
+                        <mi>x</mi>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </msup>
+                      <mo>,</mo>
+                      <mo>…</mo>
+                      <mo>,</mo>
+                      <msup>
+                        <mi>x</mi>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo stretchy="false">(</mo>
+                          <mi>t</mi>
+                          <mo>−</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </msup>
+                      <mo fence="false" stretchy="false">}</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> and is used to predict output <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <msup>
+                        <mi>y</mi>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo stretchy="false">(</mo>
+                          <mi>t</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </msup>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <p><span alt="RNN-unrolled.svg" src="RNN-unrolled.svg" class="internal-embed media-embed image-embed is-loaded"><img alt="RNN-unrolled.svg" src="data:audio/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIyODAuOTk5OTk5OTk5OTk5OTRweCIgd2lkdGg9IjI5NS4yNzc3Nzc3Nzc3Nzc3N3B4IiB2aWV3Qm94PSItMTAgLTEwIDMxNS4yNzc3Nzc3Nzc3Nzc3NyAzMDAuOTk5OTk5OTk5OTk5OTQiIGNvbnRlbnQ9IiZsdDtteEdyYXBoTW9kZWwgZHg9JnF1b3Q7MTEyJnF1b3Q7IGR5PSZxdW90OzQ3MyZxdW90OyBncmlkPSZxdW90OzEmcXVvdDsgZ3JpZFNpemU9JnF1b3Q7MTAmcXVvdDsgZ3VpZGVzPSZxdW90OzEmcXVvdDsgdG9vbHRpcHM9JnF1b3Q7MSZxdW90OyBjb25uZWN0PSZxdW90OzEmcXVvdDsgYXJyb3dzPSZxdW90OzEmcXVvdDsgZm9sZD0mcXVvdDsxJnF1b3Q7IHBhZ2U9JnF1b3Q7MCZxdW90OyBwYWdlU2NhbGU9JnF1b3Q7MSZxdW90OyBwYWdlV2lkdGg9JnF1b3Q7ODI3JnF1b3Q7IHBhZ2VIZWlnaHQ9JnF1b3Q7MTE2OSZxdW90OyBtYXRoPSZxdW90OzAmcXVvdDsgc2hhZG93PSZxdW90OzAmcXVvdDsmZ3Q7Jmx0O3Jvb3QmZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDswJnF1b3Q7LyZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzAmcXVvdDsvJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTImcXVvdDsgc3R5bGU9JnF1b3Q7ZWRnZVN0eWxlPW5vbmU7aHRtbD0xO2V4aXRYPTE7ZXhpdFk9MC41O2V4aXREeD0wO2V4aXREeT0wO2VudHJ5WD0wO2VudHJ5WT0wLjU7ZW50cnlEeD0wO2VudHJ5RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHNvdXJjZT0mcXVvdDsyJnF1b3Q7IHRhcmdldD0mcXVvdDszJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MiZxdW90OyB2YWx1ZT0mcXVvdDtoJmFtcDtsdDtzdXAmYW1wO2d0Oyh0LTEpJmFtcDtsdDsvc3VwJmFtcDtndDsmcXVvdDsgc3R5bGU9JnF1b3Q7ZWxsaXBzZTt3aGl0ZVNwYWNlPXdyYXA7aHRtbD0xO2FzcGVjdD1maXhlZDsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDsxNjAmcXVvdDsgeT0mcXVvdDs4MCZxdW90OyB3aWR0aD0mcXVvdDs0MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NDAmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTEmcXVvdDsgc3R5bGU9JnF1b3Q7ZWRnZVN0eWxlPW5vbmU7aHRtbD0xO2V4aXRYPTE7ZXhpdFk9MC41O2V4aXREeD0wO2V4aXREeT0wO2VudHJ5WD0wO2VudHJ5WT0wLjU7ZW50cnlEeD0wO2VudHJ5RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHNvdXJjZT0mcXVvdDszJnF1b3Q7IHRhcmdldD0mcXVvdDs1JnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MyZxdW90OyB2YWx1ZT0mcXVvdDt6JmFtcDtsdDtzdXAmYW1wO2d0Oyh0KSZhbXA7bHQ7L3N1cCZhbXA7Z3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VsbGlwc2U7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTthc3BlY3Q9Zml4ZWQ7JnF1b3Q7IHZlcnRleD0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHg9JnF1b3Q7MjQwJnF1b3Q7IHk9JnF1b3Q7ODAmcXVvdDsgd2lkdGg9JnF1b3Q7NDAmcXVvdDsgaGVpZ2h0PSZxdW90OzQwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzEzJnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VTdHlsZT1ub25lO2h0bWw9MTtleGl0WD0wLjU7ZXhpdFk9MDtleGl0RHg9MDtleGl0RHk9MDtlbnRyeVg9MC41O2VudHJ5WT0xO2VudHJ5RHg9MDtlbnRyeUR5PTA7JnF1b3Q7IGVkZ2U9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyBzb3VyY2U9JnF1b3Q7NCZxdW90OyB0YXJnZXQ9JnF1b3Q7MyZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzQmcXVvdDsgdmFsdWU9JnF1b3Q7eCZhbXA7bHQ7c3VwJmFtcDtndDsodCkmYW1wO2x0Oy9zdXAmYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDtlbGxpcHNlO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YXNwZWN0PWZpeGVkOyZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90OzI0MCZxdW90OyB5PSZxdW90OzE2MCZxdW90OyB3aWR0aD0mcXVvdDs0MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NDAmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTAmcXVvdDsgc3R5bGU9JnF1b3Q7ZWRnZVN0eWxlPW5vbmU7aHRtbD0xO2V4aXRYPTAuNTtleGl0WT0wO2V4aXREeD0wO2V4aXREeT0wO2VudHJ5WD0wLjU7ZW50cnlZPTE7ZW50cnlEeD0wO2VudHJ5RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHNvdXJjZT0mcXVvdDs1JnF1b3Q7IHRhcmdldD0mcXVvdDs2JnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTgmcXVvdDsgdmFsdWU9JnF1b3Q7ViB4JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VMYWJlbDtodG1sPTE7YWxpZ249Y2VudGVyO3ZlcnRpY2FsQWxpZ249bWlkZGxlO3Jlc2l6YWJsZT0wO3BvaW50cz1bXTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgY29ubmVjdGFibGU9JnF1b3Q7MCZxdW90OyBwYXJlbnQ9JnF1b3Q7MTAmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDstMC4zNDU0JnF1b3Q7IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsmZ3Q7Jmx0O214UG9pbnQgeT0mcXVvdDstNyZxdW90OyBhcz0mcXVvdDtvZmZzZXQmcXVvdDsvJmd0OyZsdDsvbXhHZW9tZXRyeSZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzE0JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VTdHlsZT1ub25lO2h0bWw9MTtleGl0WD0xO2V4aXRZPTAuNTtleGl0RHg9MDtleGl0RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHNvdXJjZT0mcXVvdDs1JnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsmZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDs0MDAmcXVvdDsgeT0mcXVvdDs5OS44NTcxNDI4NTcxNDI4OSZxdW90OyBhcz0mcXVvdDt0YXJnZXRQb2ludCZxdW90Oy8mZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7NSZxdW90OyB2YWx1ZT0mcXVvdDtoJmFtcDtsdDtzdXAmYW1wO2d0Oyh0KSZhbXA7bHQ7L3N1cCZhbXA7Z3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VsbGlwc2U7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTthc3BlY3Q9Zml4ZWQ7JnF1b3Q7IHZlcnRleD0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHg9JnF1b3Q7MzIwJnF1b3Q7IHk9JnF1b3Q7ODAmcXVvdDsgd2lkdGg9JnF1b3Q7NDAmcXVvdDsgaGVpZ2h0PSZxdW90OzQwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzgmcXVvdDsgc3R5bGU9JnF1b3Q7ZWRnZVN0eWxlPW5vbmU7aHRtbD0xO2V4aXRYPTAuNTtleGl0WT0wO2V4aXREeD0wO2V4aXREeT0wO2VudHJ5WD0wLjU7ZW50cnlZPTE7ZW50cnlEeD0wO2VudHJ5RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHNvdXJjZT0mcXVvdDs2JnF1b3Q7IHRhcmdldD0mcXVvdDs3JnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7OSZxdW90OyB2YWx1ZT0mcXVvdDtzb2Z0bWF4JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VMYWJlbDtodG1sPTE7YWxpZ249Y2VudGVyO3ZlcnRpY2FsQWxpZ249bWlkZGxlO3Jlc2l6YWJsZT0wO3BvaW50cz1bXTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgY29ubmVjdGFibGU9JnF1b3Q7MCZxdW90OyBwYXJlbnQ9JnF1b3Q7OCZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90Oy0wLjQxNjcmcXVvdDsgeT0mcXVvdDstMSZxdW90OyByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7Jmd0OyZsdDtteFBvaW50IHg9JnF1b3Q7LTEmcXVvdDsgeT0mcXVvdDstOCZxdW90OyBhcz0mcXVvdDtvZmZzZXQmcXVvdDsvJmd0OyZsdDsvbXhHZW9tZXRyeSZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzYmcXVvdDsgdmFsdWU9JnF1b3Q7byZhbXA7bHQ7c3VwJmFtcDtndDsodCkmYW1wO2x0Oy9zdXAmYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDtlbGxpcHNlO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YXNwZWN0PWZpeGVkOyZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90OzMyMCZxdW90OyB3aWR0aD0mcXVvdDs0MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NDAmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7NyZxdW90OyB2YWx1ZT0mcXVvdDt5JmFtcDtsdDtzdXAmYW1wO2d0Oyh0KSZhbXA7bHQ7L3N1cCZhbXA7Z3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VsbGlwc2U7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTthc3BlY3Q9Zml4ZWQ7JnF1b3Q7IHZlcnRleD0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHg9JnF1b3Q7MzIwJnF1b3Q7IHk9JnF1b3Q7LTgwJnF1b3Q7IHdpZHRoPSZxdW90OzQwJnF1b3Q7IGhlaWdodD0mcXVvdDs0MCZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90Oy8mZ3Q7Jmx0Oy9teENlbGwmZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDsxNSZxdW90OyB2YWx1ZT0mcXVvdDsmcXVvdDsgc3R5bGU9JnF1b3Q7ZW5kQXJyb3c9Y2xhc3NpYztodG1sPTE7ZW50cnlYPTA7ZW50cnlZPTAuNTtlbnRyeUR4PTA7ZW50cnlEeT0wOyZxdW90OyBlZGdlPSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsgdGFyZ2V0PSZxdW90OzImcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgd2lkdGg9JnF1b3Q7NTAmcXVvdDsgaGVpZ2h0PSZxdW90OzUwJnF1b3Q7IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsmZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDsxMjAmcXVvdDsgeT0mcXVvdDsxMDAmcXVvdDsgYXM9JnF1b3Q7c291cmNlUG9pbnQmcXVvdDsvJmd0OyZsdDtteFBvaW50IHg9JnF1b3Q7MTkwJnF1b3Q7IHk9JnF1b3Q7OTAmcXVvdDsgYXM9JnF1b3Q7dGFyZ2V0UG9pbnQmcXVvdDsvJmd0OyZsdDsvbXhHZW9tZXRyeSZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzE2JnF1b3Q7IHZhbHVlPSZxdW90O3JlcHJlc2VudHMgeCZhbXA7bHQ7c3VwJmFtcDtndDsoMSkmYW1wO2x0Oy9zdXAmYW1wO2d0OyZhbXA7YW1wO25ic3A7Li4uIHggJmFtcDtsdDtzcGFuIHN0eWxlPSZhbXA7cXVvdDtmb250LXNpemU6IDEwcHgmYW1wO3F1b3Q7JmFtcDtndDsodC0xKSZhbXA7bHQ7L3NwYW4mYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDt0ZXh0O2h0bWw9MTtzdHJva2VDb2xvcj1ub25lO2ZpbGxDb2xvcj1ub25lO2FsaWduPWNlbnRlcjt2ZXJ0aWNhbEFsaWduPW1pZGRsZTt3aGl0ZVNwYWNlPXdyYXA7cm91bmRlZD0wOyZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90OzE0NSZxdW90OyB5PSZxdW90OzEyMCZxdW90OyB3aWR0aD0mcXVvdDs3MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NDAmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTcmcXVvdDsgdmFsdWU9JnF1b3Q7eiZhbXA7bHQ7c3VwJmFtcDtndDsodCkmYW1wO2x0Oy9zdXAmYW1wO2d0OyZhbXA7YW1wO25ic3A7PSBXaCZhbXA7bHQ7c3VwJmFtcDtndDsodC0xKSZhbXA7bHQ7L3N1cCZhbXA7Z3Q7JmFtcDthbXA7bmJzcDsrIFV4JmFtcDtsdDtzdXAmYW1wO2d0Oyh0KSZhbXA7bHQ7L3N1cCZhbXA7Z3Q7JmFtcDthbXA7bmJzcDsrIGImcXVvdDsgc3R5bGU9JnF1b3Q7dGV4dDtodG1sPTE7c3Ryb2tlQ29sb3I9bm9uZTtmaWxsQ29sb3I9bm9uZTthbGlnbj1jZW50ZXI7dmVydGljYWxBbGlnbj1taWRkbGU7d2hpdGVTcGFjZT13cmFwO3JvdW5kZWQ9MDsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDsxODAmcXVvdDsgeT0mcXVvdDs1MCZxdW90OyB3aWR0aD0mcXVvdDsxMzAmcXVvdDsgaGVpZ2h0PSZxdW90OzIwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7L3Jvb3QmZ3Q7Jmx0Oy9teEdyYXBoTW9kZWwmZ3Q7Ij48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PHBhdGggZD0iTSA4Ny41IDE4MC41IEwgMTIxLjEzIDE4MC41IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48cGF0aCBkPSJNIDEyNi4zOCAxODAuNSBMIDExOS4zOCAxODQgTCAxMjEuMTMgMTgwLjUgTCAxMTkuMzggMTc3IFoiIGZpbGw9IiNmMGYwZjAiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxlbGxpcHNlIGN4PSI2Ny41IiBjeT0iMTgwLjUiIHJ4PSIyMCIgcnk9IjIwIiBmaWxsPSIjMmEyYTJhIiBzdHJva2U9IiNmMGYwZjAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMzhweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxODFweDsgbWFyZ2luLWxlZnQ6IDQ5cHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj5oPHN1cD4odC0xKTwvc3VwPjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PHBhdGggZD0iTSAxNjcuNSAxODAuNSBMIDIwMS4xMyAxODAuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PHBhdGggZD0iTSAyMDYuMzggMTgwLjUgTCAxOTkuMzggMTg0IEwgMjAxLjEzIDE4MC41IEwgMTk5LjM4IDE3NyBaIiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48ZWxsaXBzZSBjeD0iMTQ3LjUiIGN5PSIxODAuNSIgcng9IjIwIiByeT0iMjAiIGZpbGw9IiMyYTJhMmEiIHN0cm9rZT0iI2YwZjBmMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48Zz48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiB1bnNhZmUgY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IHVuc2FmZSBjZW50ZXI7IHdpZHRoOiAzOHB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDE4MXB4OyBtYXJnaW4tbGVmdDogMTI5cHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj56PHN1cD4odCk8L3N1cD48L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxwYXRoIGQ9Ik0gMTQ3LjUgMjQwLjUgTCAxNDcuNSAyMDYuODciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxwYXRoIGQ9Ik0gMTQ3LjUgMjAxLjYyIEwgMTUxIDIwOC42MiBMIDE0Ny41IDIwNi44NyBMIDE0NCAyMDguNjIgWiIgZmlsbD0iI2YwZjBmMCIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGVsbGlwc2UgY3g9IjE0Ny41IiBjeT0iMjYwLjUiIHJ4PSIyMCIgcnk9IjIwIiBmaWxsPSIjMmEyYTJhIiBzdHJva2U9IiNmMGYwZjAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMzhweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAyNjFweDsgbWFyZ2luLWxlZnQ6IDEyOXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+eDxzdXA+KHQpPC9zdXA+PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjwvZz48cGF0aCBkPSJNIDIyNy41IDE2MC41IEwgMjI3LjUgMTI2Ljg3IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48cGF0aCBkPSJNIDIyNy41IDEyMS42MiBMIDIzMSAxMjguNjIgTCAyMjcuNSAxMjYuODcgTCAyMjQgMTI4LjYyIFoiIGZpbGw9IiNmMGYwZjAiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDFweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxNDFweDsgbWFyZ2luLWxlZnQ6IDIyOHB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgYmFja2dyb3VuZC1jb2xvcjogIzJhMmEyYTsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgIj5WIHg8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxwYXRoIGQ9Ik0gMjQ3LjUgMTgwLjUgTCAyODEuMTMgMTgwLjM4IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48cGF0aCBkPSJNIDI4Ni4zOCAxODAuMzYgTCAyNzkuMzkgMTgzLjg5IEwgMjgxLjEzIDE4MC4zOCBMIDI3OS4zNyAxNzYuODkgWiIgZmlsbD0iI2YwZjBmMCIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGVsbGlwc2UgY3g9IjIyNy41IiBjeT0iMTgwLjUiIHJ4PSIyMCIgcnk9IjIwIiBmaWxsPSIjMmEyYTJhIiBzdHJva2U9IiNmMGYwZjAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMzhweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxODFweDsgbWFyZ2luLWxlZnQ6IDIwOXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+aDxzdXA+KHQpPC9zdXA+PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjwvZz48cGF0aCBkPSJNIDIyNy41IDgwLjUgTCAyMjcuNSA0Ni44NyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PHBhdGggZD0iTSAyMjcuNSA0MS42MiBMIDIzMSA0OC42MiBMIDIyNy41IDQ2Ljg3IEwgMjI0IDQ4LjYyIFoiIGZpbGw9IiNmMGYwZjAiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDFweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiA2MXB4OyBtYXJnaW4tbGVmdDogMjI4cHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTFweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyBiYWNrZ3JvdW5kLWNvbG9yOiAjMmEyYTJhOyB3aGl0ZS1zcGFjZTogbm93cmFwOyAiPnNvZnRtYXg8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxlbGxpcHNlIGN4PSIyMjcuNSIgY3k9IjEwMC41IiByeD0iMjAiIHJ5PSIyMCIgZmlsbD0iIzJhMmEyYSIgc3Ryb2tlPSIjZjBmMGYwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDM4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMTAxcHg7IG1hcmdpbi1sZWZ0OiAyMDlweDsiPjxkaXYgc3R5bGU9ImJveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZTogMDsgdGV4dC1hbGlnbjogY2VudGVyOyAiPjxkaXYgc3R5bGU9ImRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhOyBjb2xvcjogI2YwZjBmMDsgbGluZS1oZWlnaHQ6IDEuMjsgcG9pbnRlci1ldmVudHM6IG5vbmU7IHdoaXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtd3JhcDogbm9ybWFsOyAiPm88c3VwPih0KTwvc3VwPjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PGVsbGlwc2UgY3g9IjIyNy41IiBjeT0iMjAuNSIgcng9IjIwIiByeT0iMjAiIGZpbGw9IiMyYTJhMmEiIHN0cm9rZT0iI2YwZjBmMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48Zz48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiB1bnNhZmUgY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IHVuc2FmZSBjZW50ZXI7IHdpZHRoOiAzOHB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDIxcHg7IG1hcmdpbi1sZWZ0OiAyMDlweDsiPjxkaXYgc3R5bGU9ImJveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZTogMDsgdGV4dC1hbGlnbjogY2VudGVyOyAiPjxkaXYgc3R5bGU9ImRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhOyBjb2xvcjogI2YwZjBmMDsgbGluZS1oZWlnaHQ6IDEuMjsgcG9pbnRlci1ldmVudHM6IG5vbmU7IHdoaXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtd3JhcDogbm9ybWFsOyAiPnk8c3VwPih0KTwvc3VwPjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PHBhdGggZD0iTSA3LjUgMTgwLjUgTCA0MS4xMyAxODAuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PHBhdGggZD0iTSA0Ni4zOCAxODAuNSBMIDM5LjM4IDE4NCBMIDQxLjEzIDE4MC41IEwgMzkuMzggMTc3IFoiIGZpbGw9IiNmMGYwZjAiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDY4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMjIxcHg7IG1hcmdpbi1sZWZ0OiAzNHB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+cmVwcmVzZW50cyB4PHN1cD4oMSk8L3N1cD7CoC4uLiB4IDxzcGFuIHN0eWxlPSJmb250LXNpemU6IDEwcHgiPih0LTEpPC9zcGFuPjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMTI4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMTQxcHg7IG1hcmdpbi1sZWZ0OiA2OXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+ejxzdXA+KHQpPC9zdXA+wqA9IFdoPHN1cD4odC0xKTwvc3VwPsKgKyBVeDxzdXA+KHQpPC9zdXA+wqArIGI8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjwvc3ZnPg=="></span></p>
+          </div>
+          <div>
+            <h3 data-heading="Objective" id="Objective">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Objective
+            </h3>
+          </div>
+          <div>
+            <h5 data-heading="Backpropagation through time" id="Backpropagation_through_time">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Backpropagation through time
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msup>
+                          <mi>h</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mo stretchy="false">(</mo>
+                            <mi>t</mi>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </msup>
+                      </math></mjx-assistive-mml></mjx-container></span> depends on all previous time steps
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>gradient <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D715"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D715"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.289em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mfrac>
+                          <mrow>
+                            <mi>∂</mi>
+                            <mi>L</mi>
+                          </mrow>
+                          <mrow>
+                            <mi>∂</mi>
+                            <msup>
+                              <mi>h</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                          </mrow>
+                        </mfrac>
+                      </math></mjx-assistive-mml></mjx-container></span> depends on future steps
+                <ul class="has-list-bullet">
+                  <li data-line="2">
+                    <div class="list-bullet"></div>more specifically, depends on product of future steps
+                  </li>
+                  <li data-line="3">
+                    <div class="list-bullet"></div>impact of future times may vanish or explode
+                  </li>
+                  <li data-line="4">
+                    <div class="list-bullet"></div>RNN cannot retain info for many steps
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>NOTE: this just means it cannot be trained, in theory basic RNNs can perform well</p>
+          </div>
+          <div>
+            <h3 data-heading="GRU" id="GRU">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>GRU
+            </h3>
+          </div>
+          <div>
+            <p>add <strong>gates</strong> that control information flow<span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true" style="position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-mtable style="min-width: 15.505em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-bottom: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D70E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.104em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D70E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.104em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-msup><mjx-texatom texclass="ORD"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.26em; margin-bottom: -0.215em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.25em;"><mjx-c class="mjx-c7E"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover></mjx-texatom><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c68"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2299"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2299"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2299"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-texatom texclass="ORD"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.26em; margin-bottom: -0.215em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.25em;"><mjx-c class="mjx-c7E"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover></mjx-texatom><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                      <mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt">
+                        <mtr>
+                          <mtd>
+                            <msup>
+                              <mi>z</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                          </mtd>
+                          <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <mi>σ</mi>
+                            <mo stretchy="false">(</mo>
+                            <msub>
+                              <mi>W</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>z</mi>
+                              </mrow>
+                            </msub>
+                            <mo stretchy="false">[</mo>
+                            <msup>
+                              <mi>h</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo>−</mo>
+                                <mn>1</mn>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo>,</mo>
+                            <msup>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo stretchy="false">]</mo>
+                            <mo stretchy="false">)</mo>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <msup>
+                              <mi>r</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                          </mtd>
+                          <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <mi>σ</mi>
+                            <mo stretchy="false">(</mo>
+                            <msub>
+                              <mi>W</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>r</mi>
+                              </mrow>
+                            </msub>
+                            <mo stretchy="false">[</mo>
+                            <msup>
+                              <mi>h</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo>−</mo>
+                                <mn>1</mn>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo>,</mo>
+                            <msup>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo stretchy="false">]</mo>
+                            <mo stretchy="false">)</mo>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <msup>
+                              <mrow data-mjx-texclass="ORD">
+                                <mover>
+                                  <mi>h</mi>
+                                  <mo stretchy="false">~</mo>
+                                </mover>
+                              </mrow>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                          </mtd>
+                          <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <mi>tanh</mi>
+                            <mo data-mjx-texclass="NONE">⁡</mo>
+                            <mo stretchy="false">(</mo>
+                            <mi>W</mi>
+                            <mo stretchy="false">[</mo>
+                            <msup>
+                              <mi>r</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo>⊙</mo>
+                            <msup>
+                              <mi>h</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo>−</mo>
+                                <mn>1</mn>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo>,</mo>
+                            <msup>
+                              <mi>x</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo stretchy="false">]</mo>
+                            <mo stretchy="false">)</mo>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <msup>
+                              <mi>h</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                          </mtd>
+                          <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <mo stretchy="false">(</mo>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <msup>
+                              <mi>z</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo stretchy="false">)</mo>
+                            <mo>⊙</mo>
+                            <msup>
+                              <mi>h</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo>−</mo>
+                                <mn>1</mn>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo>+</mo>
+                            <msup>
+                              <mi>z</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                            <mo>⊙</mo>
+                            <msup>
+                              <mrow data-mjx-texclass="ORD">
+                                <mover>
+                                  <mi>h</mi>
+                                  <mo stretchy="false">~</mo>
+                                </mover>
+                              </mrow>
+                              <mrow data-mjx-texclass="ORD">
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </msup>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <h3 data-heading="LSTM" id="LSTM">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>LSTM
+            </h3>
+          </div>
+          <div>
+            <p>more intricate gates:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>forget gate
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>input gate
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>output gate <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true" style="position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-mtable style="min-width: 20.098em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-bottom: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.053em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D70E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.104em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D70E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.104em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D70E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.104em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em; padding-bottom: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.053em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2299"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2299"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="3"><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c68"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em;"><mjx-mi class="mjx-n"></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2299"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="3"><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c68"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mtable displaystyle="true" columnalign="right left" columnspacing="0em" rowspacing="3pt">
+                          <mtr>
+                            <mtd>
+                              <msup>
+                                <mi>f</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                            </mtd>
+                            <mtd>
+                              <mi></mi>
+                              <mo>=</mo>
+                              <mi>σ</mi>
+                              <mo stretchy="false">(</mo>
+                              <msub>
+                                <mi>W</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mi>f</mi>
+                                </mrow>
+                              </msub>
+                              <mo stretchy="false">[</mo>
+                              <msup>
+                                <mi>h</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>,</mo>
+                              <msup>
+                                <mi>x</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo stretchy="false">]</mo>
+                              <mo stretchy="false">)</mo>
+                            </mtd>
+                          </mtr>
+                          <mtr>
+                            <mtd>
+                              <msup>
+                                <mi>i</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                            </mtd>
+                            <mtd>
+                              <mi></mi>
+                              <mo>=</mo>
+                              <mi>σ</mi>
+                              <mo stretchy="false">(</mo>
+                              <msub>
+                                <mi>W</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mi>i</mi>
+                                </mrow>
+                              </msub>
+                              <mo stretchy="false">[</mo>
+                              <msup>
+                                <mi>h</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>,</mo>
+                              <msup>
+                                <mi>x</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo stretchy="false">]</mo>
+                              <mo stretchy="false">)</mo>
+                            </mtd>
+                          </mtr>
+                          <mtr>
+                            <mtd>
+                              <msup>
+                                <mi>o</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                            </mtd>
+                            <mtd>
+                              <mi></mi>
+                              <mo>=</mo>
+                              <mi>σ</mi>
+                              <mo stretchy="false">(</mo>
+                              <msub>
+                                <mi>W</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mi>o</mi>
+                                </mrow>
+                              </msub>
+                              <mo stretchy="false">[</mo>
+                              <msup>
+                                <mi>h</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>,</mo>
+                              <msup>
+                                <mi>x</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo stretchy="false">]</mo>
+                              <mo stretchy="false">)</mo>
+                            </mtd>
+                          </mtr>
+                          <mtr>
+                            <mtd>
+                              <msup>
+                                <mi>c</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                            </mtd>
+                            <mtd>
+                              <mi></mi>
+                              <mo>=</mo>
+                              <msup>
+                                <mi>f</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>⊙</mo>
+                              <msup>
+                                <mi>c</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>+</mo>
+                              <msup>
+                                <mi>i</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>⊙</mo>
+                              <mi>tanh</mi>
+                              <mo data-mjx-texclass="NONE">⁡</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi>W</mi>
+                              <mo stretchy="false">[</mo>
+                              <msup>
+                                <mi>h</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>,</mo>
+                              <msup>
+                                <mi>x</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo stretchy="false">]</mo>
+                              <mo stretchy="false">)</mo>
+                            </mtd>
+                          </mtr>
+                          <mtr>
+                            <mtd>
+                              <msup>
+                                <mi>h</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                            </mtd>
+                            <mtd>
+                              <mi></mi>
+                              <mo>=</mo>
+                              <msup>
+                                <mi>o</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo>⊙</mo>
+                              <mi>tanh</mi>
+                              <mo data-mjx-texclass="NONE">⁡</mo>
+                              <mo stretchy="false">(</mo>
+                              <msup>
+                                <mi>c</mi>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mo stretchy="false">(</mo>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </msup>
+                              <mo stretchy="false">)</mo>
+                            </mtd>
+                          </mtr>
+                        </mtable>
+                      </math></mjx-assistive-mml></mjx-container></span>and new cell state <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msup>
+                          <mi>c</mi>
+                          <mrow data-mjx-texclass="ORD">
+                            <mo stretchy="false">(</mo>
+                            <mi>t</mi>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </msup>
+                      </math></mjx-assistive-mml></mjx-container></span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <hr>
+          </div>
+          <div>
+            <h2 data-heading="Non-recurrent models" id="Non-recurrent_models">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Non-recurrent models
+            </h2>
+          </div>
+          <div>
+            <p>introduction</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>RNNs depend on full history
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>alternative: convolutional neural networks
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-heading="Recap: convolution" id="Recap:_convolution">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Recap: convolution
+            </h4>
+          </div>
+          <div>
+            <p><span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true" style="position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C6"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msubsup space="4"><mjx-mo class="mjx-lop"><mjx-c class="mjx-c222B TEX-S2"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.896em; margin-left: -0.388em;"><mjx-texatom size="s" texclass="ORD" style="margin-left: 0.647em;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 1.514em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msubsup><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D70F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D70F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D70F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                      <mo stretchy="false">(</mo>
+                      <mi>f</mi>
+                      <mo>⋆</mo>
+                      <mi>g</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo stretchy="false">(</mo>
+                      <mi>t</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <msubsup>
+                        <mo data-mjx-texclass="OP">∫</mo>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo>−</mo>
+                          <mi mathvariant="normal">∞</mi>
+                        </mrow>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo>+</mo>
+                          <mi mathvariant="normal">∞</mi>
+                        </mrow>
+                      </msubsup>
+                      <mi>f</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>τ</mi>
+                      <mo stretchy="false">)</mo>
+                      <mi>g</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>t</mi>
+                      <mo>−</mo>
+                      <mi>τ</mi>
+                      <mo stretchy="false">)</mo>
+                      <mi>d</mi>
+                      <mi>τ</mi>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <h3 data-heading="WaveNet" id="WaveNet">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>WaveNet
+            </h3>
+          </div>
+          <div>
+            <p>problem in 1D: we should only look into the past, not the future</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div><a data-tooltip-position="top" aria-label="https://paperswithcode.com/method/causal-convolution" rel="noopener" class="external-link" href="https://paperswithcode.com/method/causal-convolution" target="_blank">causal convolutions</a>
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div><a data-tooltip-position="top" aria-label="https://paperswithcode.com/method/dilated-causal-convolution" rel="noopener" class="external-link" href="https://paperswithcode.com/method/dilated-causal-convolution" target="_blank">dilated convolutions</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>difference to <a href="#autoregression" class="tag" target="_blank" rel="noopener">#autoregression</a> : </p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>joint training means full data still affects learned weights
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>but during application time
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-heading="Transformers" id="Transformers">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Transformers
+            </h3>
+          </div>
+          <div>
+            <p>parallelizable with attention</p>
+          </div>
+          <div>
+            <p>structure: madeup of encoder and decoder stacks</p>
+          </div>
+          <div>
+            <h5 data-heading="Attention" id="Attention">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Attention
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>convolution: weighting in window of fixed size
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>attention: weighting of whole input, but weights are different for each output
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>self-attention weighting mechanism:<br>
+              <span alt="attention.svg" src="attention.svg" class="internal-embed media-embed image-embed is-loaded"><img alt="attention.svg" src="data:audio/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIyNzAuOTk5OTk5OTk5OTk5OTRweCIgd2lkdGg9IjI2MC45OTk5OTk5OTk5OTk5NHB4IiB2aWV3Qm94PSItMTAgLTEwIDI4MC45OTk5OTk5OTk5OTk5NCAyOTAuOTk5OTk5OTk5OTk5OTQiIGNvbnRlbnQ9IiZsdDtteEdyYXBoTW9kZWwgZHg9JnF1b3Q7MTY3JnF1b3Q7IGR5PSZxdW90OzczJnF1b3Q7IGdyaWQ9JnF1b3Q7MSZxdW90OyBncmlkU2l6ZT0mcXVvdDsxMCZxdW90OyBndWlkZXM9JnF1b3Q7MSZxdW90OyB0b29sdGlwcz0mcXVvdDsxJnF1b3Q7IGNvbm5lY3Q9JnF1b3Q7MSZxdW90OyBhcnJvd3M9JnF1b3Q7MSZxdW90OyBmb2xkPSZxdW90OzEmcXVvdDsgcGFnZT0mcXVvdDswJnF1b3Q7IHBhZ2VTY2FsZT0mcXVvdDsxJnF1b3Q7IHBhZ2VXaWR0aD0mcXVvdDs4MjcmcXVvdDsgcGFnZUhlaWdodD0mcXVvdDsxMTY5JnF1b3Q7IG1hdGg9JnF1b3Q7MCZxdW90OyBzaGFkb3c9JnF1b3Q7MCZxdW90OyZndDsmbHQ7cm9vdCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzAmcXVvdDsvJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MCZxdW90Oy8mZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDs0JnF1b3Q7IHZhbHVlPSZxdW90O3gmcXVvdDsgc3R5bGU9JnF1b3Q7cm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7JnF1b3Q7IHZlcnRleD0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHg9JnF1b3Q7MTIwJnF1b3Q7IHk9JnF1b3Q7OTAmcXVvdDsgd2lkdGg9JnF1b3Q7NDAmcXVvdDsgaGVpZ2h0PSZxdW90OzMwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzUmcXVvdDsgdmFsdWU9JnF1b3Q7aW5wdXQmcXVvdDsgc3R5bGU9JnF1b3Q7dGV4dDtodG1sPTE7YWxpZ249Y2VudGVyO3ZlcnRpY2FsQWxpZ249bWlkZGxlO3Jlc2l6YWJsZT0wO3BvaW50cz1bXTthdXRvc2l6ZT0xO3N0cm9rZUNvbG9yPW5vbmU7JnF1b3Q7IHZlcnRleD0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHg9JnF1b3Q7MTIwJnF1b3Q7IHk9JnF1b3Q7NzAmcXVvdDsgd2lkdGg9JnF1b3Q7NDAmcXVvdDsgaGVpZ2h0PSZxdW90OzIwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzcmcXVvdDsgdmFsdWU9JnF1b3Q7cSZhbXA7bHQ7c3BhbiBzdHlsZT0mYW1wO3F1b3Q7Zm9udC1zaXplOiAxMHB4JmFtcDtxdW90OyZhbXA7Z3Q7aSZhbXA7bHQ7L3NwYW4mYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDtyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDsxMTAmcXVvdDsgeT0mcXVvdDsxODAmcXVvdDsgd2lkdGg9JnF1b3Q7NjAmcXVvdDsgaGVpZ2h0PSZxdW90OzMwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzkmcXVvdDsgdmFsdWU9JnF1b3Q7ViZxdW90OyBzdHlsZT0mcXVvdDtyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDs0MCZxdW90OyB5PSZxdW90OzE4MCZxdW90OyB3aWR0aD0mcXVvdDs0MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NDAmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTAmcXVvdDsgdmFsdWU9JnF1b3Q7SyZxdW90OyBzdHlsZT0mcXVvdDtyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDsyNTAmcXVvdDsgeT0mcXVvdDsxNzUmcXVvdDsgd2lkdGg9JnF1b3Q7NDAmcXVvdDsgaGVpZ2h0PSZxdW90OzQwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzM3JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VTdHlsZT1ub25lO2h0bWw9MTtleGl0WD0wO2V4aXRZPTAuNTtleGl0RHg9MDtleGl0RHk9MDtlbnRyeVg9MTtlbnRyeVk9MC41O2VudHJ5RHg9MDtlbnRyeUR5PTA7JnF1b3Q7IGVkZ2U9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyBzb3VyY2U9JnF1b3Q7MTEmcXVvdDsgdGFyZ2V0PSZxdW90OzEyJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsmZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDs4MCZxdW90OyB5PSZxdW90OzI1NSZxdW90OyBhcz0mcXVvdDt0YXJnZXRQb2ludCZxdW90Oy8mZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MzgmcXVvdDsgdmFsdWU9JnF1b3Q7c2NhbGluZywmYW1wO2x0O2JyJmFtcDtndDtzb2Z0bWF4JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VMYWJlbDtodG1sPTE7YWxpZ249Y2VudGVyO3ZlcnRpY2FsQWxpZ249bWlkZGxlO3Jlc2l6YWJsZT0wO3BvaW50cz1bXTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgY29ubmVjdGFibGU9JnF1b3Q7MCZxdW90OyBwYXJlbnQ9JnF1b3Q7MzcmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDswLjEyMzkmcXVvdDsgcmVsYXRpdmU9JnF1b3Q7MSZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90OyZndDsmbHQ7bXhQb2ludCB4PSZxdW90OzkmcXVvdDsgYXM9JnF1b3Q7b2Zmc2V0JnF1b3Q7LyZndDsmbHQ7L214R2VvbWV0cnkmZ3Q7Jmx0Oy9teENlbGwmZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDsxMSZxdW90OyB2YWx1ZT0mcXVvdDsmYW1wO2x0O3N1YiZhbXA7Z3Q7JmFtcDtsdDtzcGFuIHN0eWxlPSZhbXA7cXVvdDtmb250LXNpemU6IDEycHgmYW1wO3F1b3Q7JmFtcDtndDvOsSZhbXA7bHQ7c3ViJmFtcDtndDtpJmFtcDtsdDsvc3ViJmFtcDtndDsmYW1wO2x0Oy9zcGFuJmFtcDtndDsmYW1wO2x0Oy9zdWImYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDtyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDsxODAmcXVvdDsgeT0mcXVvdDsyNDAmcXVvdDsgd2lkdGg9JnF1b3Q7NjAmcXVvdDsgaGVpZ2h0PSZxdW90OzMwJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzMzJnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VTdHlsZT1ub25lO2h0bWw9MTtleGl0WD0wLjU7ZXhpdFk9MTtleGl0RHg9MDtleGl0RHk9MDtlbnRyeVg9MC41O2VudHJ5WT0wO2VudHJ5RHg9MDtlbnRyeUR5PTA7JnF1b3Q7IGVkZ2U9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyBzb3VyY2U9JnF1b3Q7MTImcXVvdDsgdGFyZ2V0PSZxdW90OzEzJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MzYmcXVvdDsgdmFsdWU9JnF1b3Q7zqMmcXVvdDsgc3R5bGU9JnF1b3Q7ZWRnZUxhYmVsO2h0bWw9MTthbGlnbj1jZW50ZXI7dmVydGljYWxBbGlnbj1taWRkbGU7cmVzaXphYmxlPTA7cG9pbnRzPVtdOyZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBjb25uZWN0YWJsZT0mcXVvdDswJnF1b3Q7IHBhcmVudD0mcXVvdDszMyZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90Oy0wLjU5NjUmcXVvdDsgeT0mcXVvdDstMSZxdW90OyByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7Jmd0OyZsdDtteFBvaW50IHg9JnF1b3Q7MSZxdW90OyB5PSZxdW90OzEyJnF1b3Q7IGFzPSZxdW90O29mZnNldCZxdW90Oy8mZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTImcXVvdDsgdmFsdWU9JnF1b3Q7JnF1b3Q7IHN0eWxlPSZxdW90O3JvdW5kZWQ9MTt3aGl0ZVNwYWNlPXdyYXA7aHRtbD0xOyZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB4PSZxdW90OzQ1JnF1b3Q7IHk9JnF1b3Q7MjQwJnF1b3Q7IHdpZHRoPSZxdW90OzMwJnF1b3Q7IGhlaWdodD0mcXVvdDszMCZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90Oy8mZ3Q7Jmx0Oy9teENlbGwmZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDsxMyZxdW90OyB2YWx1ZT0mcXVvdDt6JmFtcDtsdDtzdWImYW1wO2d0O2kmYW1wO2x0Oy9zdWImYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDtyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDszMCZxdW90OyB5PSZxdW90OzMxMCZxdW90OyB3aWR0aD0mcXVvdDs2MCZxdW90OyBoZWlnaHQ9JnF1b3Q7MzAmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsvJmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTcmcXVvdDsgdmFsdWU9JnF1b3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VuZEFycm93PWNsYXNzaWM7aHRtbD0xO2VudHJ5WD0wLjU7ZW50cnlZPTA7ZW50cnlEeD0wO2VudHJ5RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHRhcmdldD0mcXVvdDsxMCZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7Jmd0OyZsdDtteFBvaW50IHg9JnF1b3Q7MTQwJnF1b3Q7IHk9JnF1b3Q7MTIwJnF1b3Q7IGFzPSZxdW90O3NvdXJjZVBvaW50JnF1b3Q7LyZndDsmbHQ7bXhQb2ludCB4PSZxdW90OzI2MCZxdW90OyB5PSZxdW90OzE2MCZxdW90OyBhcz0mcXVvdDt0YXJnZXRQb2ludCZxdW90Oy8mZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MTgmcXVvdDsgdmFsdWU9JnF1b3Q7VyZhbXA7bHQ7Zm9udCBzaXplPSZhbXA7cXVvdDsxJmFtcDtxdW90OyZhbXA7Z3Q7JmFtcDtsdDtzdXAmYW1wO2d0O0smYW1wO2x0Oy9zdXAmYW1wO2d0OyZhbXA7bHQ7L2ZvbnQmYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDtlZGdlTGFiZWw7cmVzaXphYmxlPTA7aHRtbD0xO2FsaWduPWNlbnRlcjt2ZXJ0aWNhbEFsaWduPW1pZGRsZTsmcXVvdDsgY29ubmVjdGFibGU9JnF1b3Q7MCZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MTcmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgcmVsYXRpdmU9JnF1b3Q7MSZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90Oy8mZ3Q7Jmx0Oy9teENlbGwmZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDsxOSZxdW90OyB2YWx1ZT0mcXVvdDsmcXVvdDsgc3R5bGU9JnF1b3Q7ZW5kQXJyb3c9Y2xhc3NpYztodG1sPTE7ZW50cnlYPTAuNTtlbnRyeVk9MDtlbnRyeUR4PTA7ZW50cnlEeT0wOyZxdW90OyBlZGdlPSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsgdGFyZ2V0PSZxdW90OzcmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgcmVsYXRpdmU9JnF1b3Q7MSZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90OyZndDsmbHQ7bXhQb2ludCB4PSZxdW90OzE0MCZxdW90OyB5PSZxdW90OzEyMCZxdW90OyBhcz0mcXVvdDtzb3VyY2VQb2ludCZxdW90Oy8mZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDsyNzAmcXVvdDsgeT0mcXVvdDsxNzAmcXVvdDsgYXM9JnF1b3Q7dGFyZ2V0UG9pbnQmcXVvdDsvJmd0OyZsdDsvbXhHZW9tZXRyeSZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzIwJnF1b3Q7IHZhbHVlPSZxdW90O1cmYW1wO2x0O3N1cCZhbXA7Z3Q7USZhbXA7bHQ7L3N1cCZhbXA7Z3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VMYWJlbDtyZXNpemFibGU9MDtodG1sPTE7YWxpZ249Y2VudGVyO3ZlcnRpY2FsQWxpZ249bWlkZGxlOyZxdW90OyBjb25uZWN0YWJsZT0mcXVvdDswJnF1b3Q7IHZlcnRleD0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxOSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7LyZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzIxJnF1b3Q7IHZhbHVlPSZxdW90OyZxdW90OyBzdHlsZT0mcXVvdDtlbmRBcnJvdz1jbGFzc2ljO2h0bWw9MTtlbnRyeVg9MC41O2VudHJ5WT0wO2VudHJ5RHg9MDtlbnRyeUR5PTA7JnF1b3Q7IGVkZ2U9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MSZxdW90OyB0YXJnZXQ9JnF1b3Q7OSZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7Jmd0OyZsdDtteFBvaW50IHg9JnF1b3Q7MTQxJnF1b3Q7IHk9JnF1b3Q7MTIwJnF1b3Q7IGFzPSZxdW90O3NvdXJjZVBvaW50JnF1b3Q7LyZndDsmbHQ7bXhQb2ludCB4PSZxdW90OzYxJnF1b3Q7IHk9JnF1b3Q7MTc1JnF1b3Q7IGFzPSZxdW90O3RhcmdldFBvaW50JnF1b3Q7LyZndDsmbHQ7L214R2VvbWV0cnkmZ3Q7Jmx0Oy9teENlbGwmZ3Q7Jmx0O214Q2VsbCBpZD0mcXVvdDsyMiZxdW90OyB2YWx1ZT0mcXVvdDtXJmFtcDtsdDtzdXAmYW1wO2d0O1YmYW1wO2x0Oy9zdXAmYW1wO2d0OyZxdW90OyBzdHlsZT0mcXVvdDtlZGdlTGFiZWw7cmVzaXphYmxlPTA7aHRtbD0xO2FsaWduPWNlbnRlcjt2ZXJ0aWNhbEFsaWduPW1pZGRsZTsmcXVvdDsgY29ubmVjdGFibGU9JnF1b3Q7MCZxdW90OyB2ZXJ0ZXg9JnF1b3Q7MSZxdW90OyBwYXJlbnQ9JnF1b3Q7MjEmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgcmVsYXRpdmU9JnF1b3Q7MSZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90OyZndDsmbHQ7bXhQb2ludCB4PSZxdW90Oy0xJnF1b3Q7IGFzPSZxdW90O29mZnNldCZxdW90Oy8mZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MjUmcXVvdDsgdmFsdWU9JnF1b3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VuZEFycm93PW5vbmU7aHRtbD0xO2VudHJ5WD0wO2VudHJ5WT0wLjU7ZW50cnlEeD0wO2VudHJ5RHk9MDtleGl0WD0xO2V4aXRZPTAuNTtleGl0RHg9MDtleGl0RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHNvdXJjZT0mcXVvdDs3JnF1b3Q7IHRhcmdldD0mcXVvdDsxMCZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB3aWR0aD0mcXVvdDs1MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NTAmcXVvdDsgcmVsYXRpdmU9JnF1b3Q7MSZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90OyZndDsmbHQ7bXhQb2ludCB4PSZxdW90OzIxMCZxdW90OyB5PSZxdW90OzI0MCZxdW90OyBhcz0mcXVvdDtzb3VyY2VQb2ludCZxdW90Oy8mZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDsyMjAmcXVvdDsgeT0mcXVvdDsyMTUmcXVvdDsgYXM9JnF1b3Q7dGFyZ2V0UG9pbnQmcXVvdDsvJmd0OyZsdDsvbXhHZW9tZXRyeSZndDsmbHQ7L214Q2VsbCZndDsmbHQ7bXhDZWxsIGlkPSZxdW90OzI2JnF1b3Q7IHZhbHVlPSZxdW90O2RvdCBwcm9kdWN0JnF1b3Q7IHN0eWxlPSZxdW90O2VkZ2VMYWJlbDtodG1sPTE7YWxpZ249Y2VudGVyO3ZlcnRpY2FsQWxpZ249bWlkZGxlO3Jlc2l6YWJsZT0wO3BvaW50cz1bXTsmcXVvdDsgdmVydGV4PSZxdW90OzEmcXVvdDsgY29ubmVjdGFibGU9JnF1b3Q7MCZxdW90OyBwYXJlbnQ9JnF1b3Q7MjUmcXVvdDsmZ3Q7Jmx0O214R2VvbWV0cnkgeD0mcXVvdDswLjI1ODMmcXVvdDsgeT0mcXVvdDsxJnF1b3Q7IHJlbGF0aXZlPSZxdW90OzEmcXVvdDsgYXM9JnF1b3Q7Z2VvbWV0cnkmcXVvdDsmZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDstMTAmcXVvdDsgeT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O29mZnNldCZxdW90Oy8mZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MjcmcXVvdDsgdmFsdWU9JnF1b3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VuZEFycm93PW5vbmU7aHRtbD0xO2V4aXRYPTAuNTtleGl0WT0wO2V4aXREeD0wO2V4aXREeT0wOyZxdW90OyBlZGdlPSZxdW90OzEmcXVvdDsgcGFyZW50PSZxdW90OzEmcXVvdDsgc291cmNlPSZxdW90OzExJnF1b3Q7Jmd0OyZsdDtteEdlb21ldHJ5IHdpZHRoPSZxdW90OzUwJnF1b3Q7IGhlaWdodD0mcXVvdDs1MCZxdW90OyByZWxhdGl2ZT0mcXVvdDsxJnF1b3Q7IGFzPSZxdW90O2dlb21ldHJ5JnF1b3Q7Jmd0OyZsdDtteFBvaW50IHg9JnF1b3Q7MTYwJnF1b3Q7IHk9JnF1b3Q7MjYwJnF1b3Q7IGFzPSZxdW90O3NvdXJjZVBvaW50JnF1b3Q7LyZndDsmbHQ7bXhQb2ludCB4PSZxdW90OzIxMCZxdW90OyB5PSZxdW90OzIwMCZxdW90OyBhcz0mcXVvdDt0YXJnZXRQb2ludCZxdW90Oy8mZ3Q7Jmx0Oy9teEdlb21ldHJ5Jmd0OyZsdDsvbXhDZWxsJmd0OyZsdDtteENlbGwgaWQ9JnF1b3Q7MzAmcXVvdDsgdmFsdWU9JnF1b3Q7JnF1b3Q7IHN0eWxlPSZxdW90O2VuZEFycm93PW5vbmU7aHRtbD0xO2V4aXRYPTAuNTtleGl0WT0xO2V4aXREeD0wO2V4aXREeT0wO2VudHJ5WD0wLjU7ZW50cnlZPTA7ZW50cnlEeD0wO2VudHJ5RHk9MDsmcXVvdDsgZWRnZT0mcXVvdDsxJnF1b3Q7IHBhcmVudD0mcXVvdDsxJnF1b3Q7IHNvdXJjZT0mcXVvdDs5JnF1b3Q7IHRhcmdldD0mcXVvdDsxMiZxdW90OyZndDsmbHQ7bXhHZW9tZXRyeSB3aWR0aD0mcXVvdDs1MCZxdW90OyBoZWlnaHQ9JnF1b3Q7NTAmcXVvdDsgcmVsYXRpdmU9JnF1b3Q7MSZxdW90OyBhcz0mcXVvdDtnZW9tZXRyeSZxdW90OyZndDsmbHQ7bXhQb2ludCB4PSZxdW90OzEwMCZxdW90OyB5PSZxdW90OzI3MCZxdW90OyBhcz0mcXVvdDtzb3VyY2VQb2ludCZxdW90Oy8mZ3Q7Jmx0O214UG9pbnQgeD0mcXVvdDsxNTAmcXVvdDsgeT0mcXVvdDsyMjAmcXVvdDsgYXM9JnF1b3Q7dGFyZ2V0UG9pbnQmcXVvdDsvJmd0OyZsdDsvbXhHZW9tZXRyeSZndDsmbHQ7L214Q2VsbCZndDsmbHQ7L3Jvb3QmZ3Q7Jmx0Oy9teEdyYXBoTW9kZWwmZ3Q7Ij48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PHJlY3QgeD0iOTAuNSIgeT0iMjAuNSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjMwIiByeD0iNC41IiByeT0iNC41IiBmaWxsPSIjMmEyYTJhIiBzdHJva2U9IiNmMGYwZjAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMzhweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAzNnB4OyBtYXJnaW4tbGVmdDogOTFweDsiPjxkaXYgc3R5bGU9ImJveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZTogMDsgdGV4dC1hbGlnbjogY2VudGVyOyAiPjxkaXYgc3R5bGU9ImRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhOyBjb2xvcjogI2YwZjBmMDsgbGluZS1oZWlnaHQ6IDEuMjsgcG9pbnRlci1ldmVudHM6IG5vbmU7IHdoaXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtd3JhcDogbm9ybWFsOyAiPng8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDFweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxMXB4OyBtYXJnaW4tbGVmdDogMTEwcHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyB3aGl0ZS1zcGFjZTogbm93cmFwOyAiPmlucHV0PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjwvZz48cmVjdCB4PSI4MC41IiB5PSIxMTAuNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiByeD0iNC41IiByeT0iNC41IiBmaWxsPSIjMmEyYTJhIiBzdHJva2U9IiNmMGYwZjAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogNThweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxMjVweDsgbWFyZ2luLWxlZnQ6IDgxcHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICNmMGYwZjA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBub25lOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj5xPHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMTBweCI+aTwvc3Bhbj48L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxyZWN0IHg9IjEwLjUiIHk9IjExMC41IiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI2IiByeT0iNiIgZmlsbD0iIzJhMmEyYSIgc3Ryb2tlPSIjZjBmMGYwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDM4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMTMwcHg7IG1hcmdpbi1sZWZ0OiAxMXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+VjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PHJlY3QgeD0iMjIwLjUiIHk9IjEwNS41IiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI2IiByeT0iNiIgZmlsbD0iIzJhMmEyYSIgc3Ryb2tlPSIjZjBmMGYwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDM4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMTI1cHg7IG1hcmdpbi1sZWZ0OiAyMjFweDsiPjxkaXYgc3R5bGU9ImJveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZTogMDsgdGV4dC1hbGlnbjogY2VudGVyOyAiPjxkaXYgc3R5bGU9ImRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhOyBjb2xvcjogI2YwZjBmMDsgbGluZS1oZWlnaHQ6IDEuMjsgcG9pbnRlci1ldmVudHM6IG5vbmU7IHdoaXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtd3JhcDogbm9ybWFsOyAiPks8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxwYXRoIGQ9Ik0gMTUwLjUgMTg1LjUgTCA1MS44NyAxODUuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PHBhdGggZD0iTSA0Ni42MiAxODUuNSBMIDUzLjYyIDE4MiBMIDUxLjg3IDE4NS41IEwgNTMuNjIgMTg5IFoiIGZpbGw9IiNmMGYwZjAiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDFweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxODZweDsgbWFyZ2luLWxlZnQ6IDEwMXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgYmFja2dyb3VuZC1jb2xvcjogIzJhMmEyYTsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgIj5zY2FsaW5nLDxiciAvPnNvZnRtYXg8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxyZWN0IHg9IjE1MC41IiB5PSIxNzAuNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiByeD0iNC41IiByeT0iNC41IiBmaWxsPSIjMmEyYTJhIiBzdHJva2U9IiNmMGYwZjAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogNThweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxODVweDsgbWFyZ2luLWxlZnQ6IDE1MXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+PHN1Yj48c3BhbiBzdHlsZT0iZm9udC1zaXplOiAxMnB4Ij7OsTxzdWI+aTwvc3ViPjwvc3Bhbj48L3N1Yj48L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxwYXRoIGQ9Ik0gMzAuNSAyMDAuNSBMIDMwLjUgMjM0LjEzIiBmaWxsPSJub25lIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48cGF0aCBkPSJNIDMwLjUgMjM5LjM4IEwgMjcgMjMyLjM4IEwgMzAuNSAyMzQuMTMgTCAzNCAyMzIuMzggWiIgZmlsbD0iI2YwZjBmMCIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMXB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDIyMXB4OyBtYXJnaW4tbGVmdDogMzFweDsiPjxkaXYgc3R5bGU9ImJveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZTogMDsgdGV4dC1hbGlnbjogY2VudGVyOyAiPjxkaXYgc3R5bGU9ImRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMXB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhOyBjb2xvcjogI2YwZjBmMDsgbGluZS1oZWlnaHQ6IDEuMjsgcG9pbnRlci1ldmVudHM6IG5vbmU7IGJhY2tncm91bmQtY29sb3I6ICMyYTJhMmE7IHdoaXRlLXNwYWNlOiBub3dyYXA7ICI+zqM8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxyZWN0IHg9IjE1LjUiIHk9IjE3MC41IiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHJ4PSI0LjUiIHJ5PSI0LjUiIGZpbGw9IiMyYTJhMmEiIHN0cm9rZT0iI2YwZjBmMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48cmVjdCB4PSIwLjUiIHk9IjI0MC41IiB3aWR0aD0iNjAiIGhlaWdodD0iMzAiIHJ4PSI0LjUiIHJ5PSI0LjUiIGZpbGw9IiMyYTJhMmEiIHN0cm9rZT0iI2YwZjBmMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48Zz48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiB1bnNhZmUgY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IHVuc2FmZSBjZW50ZXI7IHdpZHRoOiA1OHB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDI1NXB4OyBtYXJnaW4tbGVmdDogMXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+ejxzdWI+aTwvc3ViPjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PHBhdGggZD0iTSAxMTAuNSA1MC41IEwgMjM0LjY0IDEwMy4wMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PHBhdGggZD0iTSAyMzkuNDcgMTA1LjA2IEwgMjMxLjY2IDEwNS41NiBMIDIzNC42NCAxMDMuMDIgTCAyMzQuMzkgOTkuMTEgWiIgZmlsbD0iI2YwZjBmMCIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMXB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDc4cHg7IG1hcmdpbi1sZWZ0OiAxNzZweDsiPjxkaXYgc3R5bGU9ImJveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZTogMDsgdGV4dC1hbGlnbjogY2VudGVyOyAiPjxkaXYgc3R5bGU9ImRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMXB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhOyBjb2xvcjogI2YwZjBmMDsgbGluZS1oZWlnaHQ6IDEuMjsgcG9pbnRlci1ldmVudHM6IG5vbmU7IGJhY2tncm91bmQtY29sb3I6ICMyYTJhMmE7IHdoaXRlLXNwYWNlOiBub3dyYXA7ICI+Vzxmb250IHNpemU9IjEiPjxzdXA+Szwvc3VwPjwvZm9udD48L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PC9nPjxwYXRoIGQ9Ik0gMTEwLjUgNTAuNSBMIDExMC41IDEwNC4xMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PHBhdGggZD0iTSAxMTAuNSAxMDkuMzggTCAxMDcgMTAyLjM4IEwgMTEwLjUgMTA0LjEzIEwgMTE0IDEwMi4zOCBaIiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48Zz48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiB1bnNhZmUgY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IHVuc2FmZSBjZW50ZXI7IHdpZHRoOiAxcHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogODFweDsgbWFyZ2luLWxlZnQ6IDExMXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgYmFja2dyb3VuZC1jb2xvcjogIzJhMmEyYTsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgIj5XPHN1cD5RPC9zdXA+PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjwvZz48cGF0aCBkPSJNIDExMS41IDUwLjUgTCAzNS42MiAxMDYuNzEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxwYXRoIGQ9Ik0gMzEuNCAxMDkuODMgTCAzNC45NCAxMDIuODYgTCAzNS42MiAxMDYuNzEgTCAzOS4xMSAxMDguNDggWiIgZmlsbD0iI2YwZjBmMCIgc3Ryb2tlPSIjZjBmMGYwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJub25lIi8+PGc+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMXB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDgxcHg7IG1hcmdpbi1sZWZ0OiA3MHB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgYmFja2dyb3VuZC1jb2xvcjogIzJhMmEyYTsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgIj5XPHN1cD5WPC9zdXA+PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjwvZz48cGF0aCBkPSJNIDE0MC41IDEyNS41IEwgMjIwLjUgMTI1LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ibm9uZSIvPjxnPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDFweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxMjZweDsgbWFyZ2luLWxlZnQ6IDE4MXB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjZjBmMGYwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogbm9uZTsgYmFja2dyb3VuZC1jb2xvcjogIzJhMmEyYTsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgIj5kb3QgcHJvZHVjdDwvZGl2PjwvZGl2PjwvZGl2PjwvZm9yZWlnbk9iamVjdD48L2c+PHBhdGggZD0iTSAxODAuNSAxNzAuNSBMIDE4MC41IDEzMC41IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48cGF0aCBkPSJNIDMwLjUgMTUwLjUgTCAzMC41IDE3MC41IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMGYwZjAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9Im5vbmUiLz48L3N2Zz4="></span><br>
+              → self-attention: same input for all 3 (query, key, value)
+            </p>
+          </div>
+          <div>
+            <p>in matrix notation: <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true" style="position: relative;"><mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-mtext class="mjx-n"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c78"></mjx-c></mjx-mtext><mjx-mrow space="2"><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28 TEX-S3"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.052em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-msqrt><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.082em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-box></mjx-sqrt></mjx-msqrt></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29 TEX-S3"></mjx-c></mjx-mo></mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44D TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                      <mtext>softmax</mtext>
+                      <mrow data-mjx-texclass="INNER">
+                        <mo data-mjx-texclass="OPEN">(</mo>
+                        <mfrac>
+                          <mrow>
+                            <mi>Q</mi>
+                            <mo>×</mo>
+                            <msup>
+                              <mi>K</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>T</mi>
+                              </mrow>
+                            </msup>
+                          </mrow>
+                          <msqrt>
+                            <msub>
+                              <mi>d</mi>
+                              <mrow data-mjx-texclass="ORD">
+                                <mi>k</mi>
+                              </mrow>
+                            </msub>
+                          </msqrt>
+                        </mfrac>
+                        <mo data-mjx-texclass="CLOSE">)</mo>
+                      </mrow>
+                      <mi>V</mi>
+                      <mo>=</mo>
+                      <mi>Z</mi>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <h5 data-heading="Encoder Block" id="Encoder_Block">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Encoder Block
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>word embeddings are fed into attention layer, results are fed into FFNN
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>attention block is shared among inputs/embeddings, the rest is handled independently
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 data-heading="Positional Encoding" id="Positional_Encoding">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Positional Encoding
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>in general, attention mechanisms do not care about token order
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>workaround: positional encoding added/concatenated with embedding
+                <ul class="has-list-bullet">
+                  <li data-line="2">
+                    <div class="list-bullet"></div>basically: each position gets its own vector
+                  </li>
+                  <li data-line="3">
+                    <div class="list-bullet"></div>the same word can be represented differently based on embedding
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 data-heading="Training" id="Training">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Training
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>focus attention on history (mask attention for future tokens)
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>aka only use full input and previous outputs
+                <ul class="has-list-bullet">
+                  <li data-line="2">
+                    <div class="list-bullet"></div>keys and values only depend on past
+                  </li>
+                </ul>
+              </li>
+              <li data-line="3">
+                <div class="list-bullet"></div>outputs: probabilities over all possible words → sample output word from that
+              </li>
+              <li data-line="4">
+                <div class="list-bullet"></div>while application can run in parallel, training still needs to be done in sequential manner
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 data-heading="Complexity" id="Complexity">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Complexity
+            </h5>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>quadratic complexity → one weight per input and output
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>intractable for long sequences
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>possible solutions:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>different structure of attention weights
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>low-rank approximations
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>downsampling sequence length n
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-heading="GPT Models" id="GPT_Models">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>GPT Models
+            </h3>
+          </div>
+          <div>
+            <p><strong>G</strong>enerative <strong>P</strong>re-trained <strong>T</strong>ransformer</p>
+          </div>
+          <div>
+            <p>training:</p>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">unsupervised pre-training on predicting next token in a sequence</li>
+              <li data-line="1">task-specific fine-tuning<br>
+                → large text corpora, very large models</li>
+            </ol>
+          </div>
+          <div>
+            <p>transfer learning:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>either copy parts (usually lower layers)
+              </li>
+              <li data-line="1">
+                <div class="list-bullet"></div>or use pre-trained parts as warm start (with frozen layers)
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>foundation models:</p>
+          </div>
+          <div>
+            <ul class="has-list-bullet">
+              <li data-line="0">
+                <div class="list-bullet"></div>
+                <div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                    <path d="M3 8L12 17L21 8"></path>
+                  </svg></div>train single basic model on large dataset
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>learn okay-ish first layers
+                  </li>
+                </ul>
+              </li>
+              <li data-line="2">
+                <div class="list-bullet"></div>then use transfer learning to focus on specific task
+              </li>
+            </ul>
           </div>
           <div class="mod-footer"></div>
         </div>
@@ -16136,18 +17497,172 @@ PICKR 1.8.2 MIT | https://github.com/Simonwep/pickr
           <div class="outline-header">
             <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
           </div>
-          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Logic">
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#1.4_Neural_Network_Approaches">
               <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                   <path d="M3 8L12 17L21 8"></path>
-                </svg></div><span class="outline-item-title">Logic</span>
+                </svg></div><span class="outline-item-title">1.4 Neural Network Approaches</span>
             </a>
             <div class="outline-item-children">
-              <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Propositional_Logic">
+              <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Motivation">
                   <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
                       <path d="M3 8L12 17L21 8"></path>
-                    </svg></div><span class="outline-item-title">Propositional Logic</span>
+                    </svg></div><span class="outline-item-title">Motivation</span>
                 </a>
                 <div class="outline-item-children"></div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Co-occurrence">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">Co-occurrence</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#SVD">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">SVD</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Word2vec">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">Word2vec</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#Skip-gram">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Skip-gram</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Training">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Training</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#RNNs">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">RNNs</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#Definition">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Definition</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#Objective">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Objective</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Backpropagation_through_time">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Backpropagation through time</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#GRU">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">GRU</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#LSTM">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">LSTM</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#Non-recurrent_models">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">Non-recurrent models</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Recap:_convolution">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Recap: convolution</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#WaveNet">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">WaveNet</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#Transformers">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Transformers</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Attention">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Attention</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Encoder_Block">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Encoder Block</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Positional_Encoding">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Positional Encoding</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Training">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Training</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="5"><a class="outline-item-contents internal-link" href="#Complexity">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Complexity</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#GPT_Models">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">GPT Models</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
