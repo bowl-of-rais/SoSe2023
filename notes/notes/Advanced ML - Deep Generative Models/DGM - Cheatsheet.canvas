@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"id":"ff24c052cb0fa81f","x":-2120,"y":-560,"width":1130,"height":1260,"type":"group","label":"Variational Inference"},
+		{"type":"group","id":"6805df6bfc6bee33","x":-840,"y":-173,"width":1350,"height":487,"label":"Normalizing Flows"},
+		{"id":"f6abed02525defe6","x":-1596,"y":-540,"width":317,"height":160,"color":"5","type":"text","text":"high-dimensional data $x$: model $p(x)$ with few latent features $z$\n1. sample $z \\sim p_\\theta(z)$\n2. generate $x \\sim p_{\\theta}(x\\mid z)$"},
+		{"id":"7ed6b6720d082443","x":-1933,"y":-350,"width":492,"height":120,"type":"text","text":"marginal likelihood: $$p_{\\theta}(x) = \\int p_{\\theta}(x,z) dz = \\int p_{\\theta}(z)p_{\\theta}(x\\mid z) dz = \\mathbb{E}_{z\\sim p_{\\theta}(z)}[p_{\\theta}(x\\mid z)]$$"},
+		{"id":"6b6b404582debca9","x":-1404,"y":-340,"width":394,"height":100,"type":"text","text":"**inference**: $p_{\\theta(z}\\mid x) = \\frac{p_{\\theta}(x \\mid z)p_{\\theta}(z)}{p_{\\theta}(x)}$\n**learning**: $\\max_{\\theta} \\log p_{\\theta}(X) = \\max_{\\theta} \\frac{1}{N} \\sum\\limits_{i=1}^{N} \\log p_{\\theta}(x_{i})$"},
+		{"id":"d1a0a6bfa57173fd","x":-1616,"y":-120,"width":356,"height":140,"type":"text","text":"MLE integral has no closed-form solution: use set of lower bounds $\\mathcal{G}$ with $$\\max_{\\theta} f(\\theta) \\geq \\max_{g\\in\\mathcal{G}} \\max_{\\theta} g(\\theta)$$"},
+		{"id":"38312e4b382b8632","x":-2100,"y":40,"width":380,"height":240,"type":"text","text":"**Kullback-Leibler Divergence** $$\\mathbb{KL}(q(z) \\mid \\mid p(z)) := \\int q(z) \\log\\frac{q(z)}{p(z)} dz$$similarity measure between distributions\n- asymmetric, non-negative\n- $0$ iff $p=q$"},
+		{"id":"cad6daa390239096","x":-1649,"y":100,"width":423,"height":120,"color":"5","type":"text","text":"$$\n\\log p_{\\theta} (x) = \\underbrace{\\mathbb{E}_{z\\sim q(z)} \\left[ \\frac{p_{\\theta}(x, z)}{q(z)} \\right]}_{\\mathcal{L}(\\theta, q)} + \\underbrace{\\mathbb{KL} (q(z) \\mid\\mid p_{\\theta}(z \\mid x))}_{\\geq 0}$$"},
+		{"id":"9ef3851d4035c674","x":-1628,"y":240,"width":380,"height":80,"type":"text","text":"for any fixed $\\theta$: maximizing ELBO w.r.t $q$ $\\Leftrightarrow$ make $q(z)$ as close as to $p_{\\theta}(z \\mid x)$ as possible"},
+		{"id":"d1997c3528ea3c50","x":-2087,"y":360,"width":400,"height":255,"type":"file","file":"notes/assets/8egXBCs.gif"},
+		{"id":"58cf3897a7713688","x":-1606,"y":400,"width":337,"height":280,"color":"5","type":"text","text":"**EM for Variational Inference**\n- E-step: picking another function $$\nq^{(t)}(z) = \\arg \\max_{q} \\mathcal{L}(\\theta^{(t)}, q)$$\n- M-step: maximizing new function $$\n\\theta^{(t+1)} = \\arg\\max_{\\theta} \\mathcal{L}(\\theta, q^{(t)})$$"},
+		{"type":"text","text":"$f$ invertible\n- stays in same dimension\n- $\\det(f) \\not = 0$","id":"3b81053b5377cf22","x":-820,"y":-95,"width":275,"height":132},
+		{"type":"text","text":"$f$, $f^{-1}$ differentiable\n- Jacobian of inverse exists everywhere\n- sufficient condition","id":"1ecb7030160a15dc","x":-820,"y":97,"width":275,"height":164},
+		{"type":"text","text":"$p_K(x) = p_0(z_0) \\prod^K_{i=1} \\left|\\det\\left(\\frac{\\partial f_i^{-1}(z_i)}{\\partial z_i}\\right)\\right|$","id":"e1c670401ba444a7","x":-265,"y":227,"width":310,"height":67,"color":"5"},
+		{"type":"text","text":"reverse parametrization: known $g=f^{-1}$","id":"a81d23a76ed88645","x":155,"y":-83,"width":335,"height":60},
+		{"type":"text","text":"forward parametrization: known $f$","id":"8bb76b5a3fa71a33","x":155,"y":167,"width":306,"height":60},
+		{"type":"text","text":"conditions","id":"d7f004840ebfbcdf","x":-505,"y":37,"width":163,"height":60},
+		{"type":"text","text":"**IDEA**: model complex distributions by applying transformations to simpler distributions","id":"7df7eb6fd345c210","x":-385,"y":-153,"width":390,"height":100},
+		{"type":"text","text":"#changeofvariables \n$$p_2(x) = p_1(f^{-1}(x)) \\cdot \\left|\\det\\left(\\frac{\\partial f^{-1}(x)}{\\partial x}\\right)\\right|$$","id":"9669038cef41dd02","x":-272,"y":7,"width":325,"height":120,"color":"5"}
+	],
+	"edges":[
+		{"id":"0b690e7882657a8d","fromNode":"7df7eb6fd345c210","fromSide":"bottom","toNode":"9669038cef41dd02","toSide":"top"},
+		{"id":"98673bad2bedcb2c","fromNode":"9669038cef41dd02","fromSide":"bottom","toNode":"e1c670401ba444a7","toSide":"top","label":"stacking"},
+		{"id":"1773d570d1970f3d","fromNode":"9669038cef41dd02","fromSide":"right","toNode":"a81d23a76ed88645","toSide":"left","toEnd":"none"},
+		{"id":"d283cd9db504f887","fromNode":"9669038cef41dd02","fromSide":"right","toNode":"8bb76b5a3fa71a33","toSide":"left","toEnd":"none"},
+		{"id":"5bf54bb7e21dd074","fromNode":"d7f004840ebfbcdf","fromSide":"right","toNode":"9669038cef41dd02","toSide":"left","toEnd":"none"},
+		{"id":"798a5121e36f9598","fromNode":"d7f004840ebfbcdf","fromSide":"bottom","toNode":"1ecb7030160a15dc","toSide":"right","toEnd":"none"},
+		{"id":"7f467bc5e3612ff5","fromNode":"3b81053b5377cf22","fromSide":"right","toNode":"d7f004840ebfbcdf","toSide":"top","toEnd":"none"},
+		{"id":"b9c837960e5871f8","fromNode":"f6abed02525defe6","fromSide":"left","toNode":"7ed6b6720d082443","toSide":"top","toEnd":"none"},
+		{"id":"3521c8cfcbd0d180","fromNode":"f6abed02525defe6","fromSide":"right","toNode":"6b6b404582debca9","toSide":"top","label":"tasks"},
+		{"id":"8a042967b410c084","fromNode":"6b6b404582debca9","fromSide":"bottom","toNode":"d1a0a6bfa57173fd","toSide":"top"},
+		{"id":"94bd56b15b4c0e7b","fromNode":"7ed6b6720d082443","fromSide":"bottom","toNode":"d1a0a6bfa57173fd","toSide":"top"},
+		{"id":"ccce3669854d5f7e","fromNode":"d1a0a6bfa57173fd","fromSide":"bottom","toNode":"cad6daa390239096","toSide":"top","toEnd":"none","label":"pick q(z)"},
+		{"id":"bf87fc31049147a9","fromNode":"38312e4b382b8632","fromSide":"right","toNode":"cad6daa390239096","toSide":"left","toEnd":"none"},
+		{"id":"80c37f8157a5db31","fromNode":"cad6daa390239096","fromSide":"bottom","toNode":"9ef3851d4035c674","toSide":"top","toEnd":"none"},
+		{"id":"005a5e3acee67bc3","fromNode":"9ef3851d4035c674","fromSide":"bottom","toNode":"58cf3897a7713688","toSide":"top","label":"compute posterior"},
+		{"id":"37d7c27e60c073b0","fromNode":"d1997c3528ea3c50","fromSide":"right","toNode":"58cf3897a7713688","toSide":"left","toEnd":"none"},
+		{"id":"9c5d16fcfa9e2d3b","fromNode":"d1a0a6bfa57173fd","fromSide":"right","toNode":"6805df6bfc6bee33","toSide":"left","toEnd":"none","label":"NF did this with\nreverse\nparametrization"}
+	]
+}

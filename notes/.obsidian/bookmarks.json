@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "path": "notes/Advanced ML - Deep Generative Models/DGM - Cheatsheet.canvas",
+      "ctime": 1683108552044
+    },
+    {
+      "type": "group",
+      "ctime": 1683108700573,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1683108682198,
+          "path": "notes/IN2049 Logic/Logic - Cheatsheet.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 1683108682198,
+          "path": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 1683108682198,
+          "path": "notes/ML for Graphs and Sequential Data/MLGS - Cheatsheet.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 1683108682198,
+          "path": "notes/Advanced ML - Deep Generative Models/DGM - Cheatsheet.canvas"
+        }
+      ],
+      "title": "Summaries"
+    }
+  ]
+}

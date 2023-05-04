@@ -1,8 +1,13 @@
 [
   "highlightr-plugin",
   "symbols-prettifier",
-  "reference-map",
   "obsidian-file-color",
   "table-editor-obsidian",
-  "webpage-html-export"
+  "webpage-html-export",
+  "quick-latex",
+  "obsidian-tikzjax",
+  "drawio-obsidian",
+  "obsidian-icon-folder",
+  "obsidian-comments",
+  "obsidian-pandoc-reference-list"
 ]

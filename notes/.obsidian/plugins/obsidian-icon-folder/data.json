@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "migrated": true,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "🧊",
+      "🍀",
+      "LiImage",
+      "🧑‍🤝‍🧑",
+      "💬"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false
+  },
+  "notes/Advanced ML - Deep Generative Models": "🍀",
+  "notes/IN2049 Logic": "🧠",
+  "notes/IN2346 Introduction to Deep Learning": "☸",
+  "notes/ML for Graphs and Sequential Data": "🧊",
+  "notes/Technology, Economy, and Society": "🧑‍🤝‍🧑",
+  "notes/assets": "LiImage"
+}

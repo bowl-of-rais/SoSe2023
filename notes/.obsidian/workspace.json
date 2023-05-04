@@ -6,50 +6,61 @@
       {
         "id": "b782b62b85d7fbfb",
         "type": "tabs",
+        "dimension": 54.55172413793103,
         "children": [
           {
-            "id": "4bb686325db59365",
+            "id": "d8edc9c077257f6d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/ML for Graphs and Sequential Data/1.1 Autoregressive Models.md",
+                "file": "notes/ML for Graphs and Sequential Data/1.4 Neural Network Approaches.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b173ab54dfb54299",
+            "id": "6110da61214f197e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.7"
+              }
+            }
+          },
+          {
+            "id": "54990cf83d9ba9aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/ML for Graphs and Sequential Data/1.2 Markov Chains.md",
+                "file": "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b42e5daf869903b3",
+            "id": "57129b6a8a314595",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/IN2049 Logic/2.1 Basics of Propositional Logic.md",
+                "file": "notes/IN2346 Introduction to Deep Learning/1. Machine Learning Basics.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f933d051734a88a8",
+            "id": "93a9d1bf1519cdf5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
+                "file": "notes/Technology, Economy, and Society/1. Technological Momentum (T.P.Hughes).md",
                 "mode": "source",
                 "source": false
               }
@@ -57,6 +68,74 @@
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "7c7bcfa60587aad5",
+        "type": "tabs",
+        "dimension": 45.44827586206897,
+        "children": [
+          {
+            "id": "ecbc44060a8890e7",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "notes/IN2049 Logic/Logic - Cheatsheet.canvas",
+                "viewState": {
+                  "x": 502.0752678782712,
+                  "y": -155.88054445850202,
+                  "zoom": -0.5387984155282743
+                }
+              }
+            }
+          },
+          {
+            "id": "cc3209109b07de32",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
+                "viewState": {
+                  "x": 420.6126077654702,
+                  "y": 583.6777133744752,
+                  "zoom": -1.4243595692284243
+                }
+              }
+            }
+          },
+          {
+            "id": "67a03bb484dec17c",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "notes/ML for Graphs and Sequential Data/MLGS - Cheatsheet.canvas",
+                "viewState": {
+                  "x": 2472.647426510188,
+                  "y": 269.1412401200381,
+                  "zoom": 0.16091520941518175
+                }
+              }
+            }
+          },
+          {
+            "id": "ec070f4fa0709f60",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "notes/Advanced ML - Deep Generative Models/DGM - Cheatsheet.canvas",
+                "viewState": {
+                  "x": -1450.4793233602811,
+                  "y": 246.10855824019112,
+                  "zoom": -1.455356903959333
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -101,12 +180,22 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "2c5c25757e85fd28",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "4968eb755a6d2305",
@@ -122,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
+                "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +228,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
+                "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,20 +251,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md"
+                "file": "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas"
               }
             }
           },
           {
-            "id": "d806a28fbfd72c13",
+            "id": "261d046f18ef7c4e",
             "type": "leaf",
             "state": {
-              "type": "reference-map-view",
+              "type": "ReferenceListView",
               "state": {}
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -190,50 +279,61 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "reference-map:Reference Map": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-comments:Show Comments Panel": false,
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "f933d051734a88a8",
+  "active": "cc3209109b07de32",
   "lastOpenFiles": [
-    "notes/IN2049 Logic/2.1 Basics of Propositional Logic.md",
-    "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
-    "notes/IN2049 Logic/1 Introduction to Logic.md",
-    "notes/IN2049 Logic/Logic - Organizational.md",
-    "notes/IN2049 Logic/Logic.md",
-    "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
+    "notes/IN2346 Introduction to Deep Learning/1. Machine Learning Basics.md",
+    "notes/IN2346 Introduction to Deep Learning/I2DL - Cheatsheet.canvas",
+    "notes/IN2346 Introduction to Deep Learning/2. Basics of Neural Networks.md",
+    "notes/IN2346 Introduction to Deep Learning/computegraph_mse.svg",
+    "notes/IN2346 Introduction to Deep Learning/computational-graph.svg",
+    "notes/IN2346 Introduction to Deep Learning/NN-layer-structure.svg",
+    "notes/ML for Graphs and Sequential Data/1.4 Neural Network Approaches.md",
+    "notes/ML for Graphs and Sequential Data/MLGS - Cheatsheet.canvas",
+    "notes/ML for Graphs and Sequential Data/attention.svg",
+    "notes/IN2346 Introduction to Deep Learning/2-layer network.svg",
+    "notes/IN2346 Introduction to Deep Learning/3. Maximum Likelihood.md",
+    "notes/Advanced ML - Deep Generative Models/2.1. Variational inference.md",
+    "notes/IN2346 Introduction to Deep Learning/2. Linear Regression.md",
+    "notes/Advanced ML - Deep Generative Models/DGM - Cheatsheet.canvas",
+    "notes/ML for Graphs and Sequential Data/Overview ML for Graphs and Sequential Data.md",
+    "notes/assets/8egXBCs.gif",
+    "notes/assets/8egXBCs.gif.crdownload",
+    "notes/assets/Pasted image 20230504101118.png",
+    "notes/Advanced ML - Deep Generative Models/LVMs.svg",
+    "notes/IN2346 Introduction to Deep Learning/Background/Python iterators.md",
+    "notes/IN2346 Introduction to Deep Learning/Background",
+    "notes/ML for Graphs and Sequential Data/RNN-unrolled.svg",
+    "notes/ML for Graphs and Sequential Data/RNN block.svg",
+    "notes/IN2049 Logic/Logic - Cheatsheet.canvas",
     "notes/ML for Graphs and Sequential Data/1.3 Hidden Markov Models.md",
+    "notes/IN2049 Logic/2.3 Normal Forms in Propositional Logic.md",
+    "notes/IN2049 Logic/2.5 Resolution.md",
+    "notes/IN2049 Logic/2.1 Basics of Propositional Logic.md",
+    "notes/IN2049 Logic/2.4 Compactness in Propositional Logic.md",
+    "notes/IN2049 Logic/2.2 Equivalences in Propositional Logic.md",
+    "notes/IN2049 Logic/Logic.md",
+    "notes/IN2049 Logic/Logic - Organizational.md",
+    "notes/Advanced ML - Deep Generative Models/Overview Advanced ML - Deep Generative Models.md",
     "notes/ML for Graphs and Sequential Data/1.2 Markov Chains.md",
     "notes/ML for Graphs and Sequential Data/1.1 Autoregressive Models.md",
-    "index.md",
-    "notes/Advanced ML - Deep Generative Models/2.1. Variational inference.md",
-    "notes/Advanced ML - Deep Generative Models/2.2. Variational Autoencoder.md",
-    "notes/Advanced ML - Deep Generative Models/3. Generative Adversarial Networks.md",
-    "notes/Advanced ML - Deep Generative Models/4. Denoising Diffusion.md",
-    "notes/Advanced ML - Deep Generative Models/Advanced ML - Deep Generative Models.md",
-    "notes/Advanced ML - Deep Generative Models/Introduction.md",
-    "notes/IN2346 Introduction to Deep Learning/1 - Machine Learning Basics.md",
-    "notes/IN2346 Introduction to Deep Learning/10 - CNNs.md",
-    "notes/IN2346 Introduction to Deep Learning/11 - RNNs.md",
-    "notes/IN2346 Introduction to Deep Learning/12 - Advanced DL architectures.md",
-    "notes/IN2346 Introduction to Deep Learning/2 - Linear Regression.md",
-    "notes/IN2346 Introduction to Deep Learning/3 - Maximum Likelihood.md",
-    "notes/IN2346 Introduction to Deep Learning/4 - Neural Networks.md",
-    "notes/IN2346 Introduction to Deep Learning/5 - Computational Graphs.md",
-    "notes/IN2346 Introduction to Deep Learning/6 - Optimization and Backpropagation.md",
-    "notes/IN2346 Introduction to Deep Learning/7 - Scaling Optimization to Large Data.md",
+    "notes/Advanced ML - Deep Generative Models/1. Normalizing flows.md",
+    "notes/IN2049 Logic/1 Introduction to Logic.md",
+    "lit.md",
+    "lit.bib",
+    "references.md",
+    "notes/ML recap/Untitled.md",
+    "notes/ML recap",
+    "notes/IN2346 Introduction to Deep Learning/Untitled.md",
     "notes",
-    "assets/Pasted image 20230420095356.png",
-    "assets",
+    "notes/assets",
     "New folder",
-    "Pasted image 20230420095356.png",
     "notes/Technology, Economy, and Society",
     "IN2356 Autonomous Driving",
-    "IN2222 Cognitive Systems",
-    "notes/IN2049 Logic",
-    "notes/ML for Graphs and Sequential Data",
-    "notes/Advanced ML - Deep Generative Models",
-    "notes/IN2346 Introduction to Deep Learning"
+    "IN2222 Cognitive Systems"
   ]
 }
